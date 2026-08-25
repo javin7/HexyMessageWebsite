@@ -1,0 +1,1888 @@
+/* ==========================================================================
+   BEST LIFE 和熙元 - Massage Therapy & Holistic Wellness Clinic
+   Clean Editorial Zen Design System
+   Color Theme: #a67a4e | Sharp Architectural Lines (0px Radius)
+   Inspirations: WaterSenseSpa & OsteoTuina
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Google Fonts Import
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;500;600&display=swap');
+
+/* --------------------------------------------------------------------------
+   Design Tokens & CSS Variables
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Colors */
+  --primary: #a67a4e;
+  --primary-light: #c2986f;
+  --primary-dark: #8c6239;
+  --primary-subtle: #faf6f0;
+  --primary-glow: rgba(166, 122, 78, 0.12);
+  --primary-border: rgba(166, 122, 78, 0.28);
+
+  /* Light & Clean Palette */
+  --bg-main: #fcfbfa;
+  --bg-surface: #f7f4ee;
+  --bg-card: #ffffff;
+  --bg-subtle: #f2ece2;
+  
+  /* Text & Contrast */
+  --text-main: #1f1b18;
+  --text-body: #4a433d;
+  --text-muted: #80756a;
+  --text-light: #ab9f93;
+
+  /* Borders & Hairlines */
+  --border-light: #e8e2d8;
+  --border-subtle: #f0eae0;
+  --border-dark: #2d2621;
+
+  /* Dark Accents (Used sparingly for luxury contrast) */
+  --dark-bg: #161311;
+  --dark-surface: #1e1916;
+  --dark-card: #26201c;
+  --dark-text: #f8f4ee;
+  --dark-muted: #9e9185;
+
+  /* Accents */
+  --accent-green: #3d6852;
+  --accent-green-bg: #f1f7f4;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  --font-display: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing & Layout */
+  --container-max: 1200px;
+  --header-height: 80px;
+  --section-pad: 7.5rem 0;
+
+  /* Transitions */
+  --transition-fast: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Global Reset & Zero Radius Enforcement
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important; /* Sharp architectural aesthetic */
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  line-height: 1.75;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Clean Editorial Typography
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--text-main);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+.heading-xl {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.heading-lg {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 400;
+}
+
+.heading-md {
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+}
+
+.heading-sm {
+  font-size: 1.15rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+}
+
+.subtitle-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.subtitle-badge::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1.35rem;
+  height: 1px;
+  background-color: var(--primary);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 4.5rem auto;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 1.1rem;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   Clean Minimalist Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-dark {
+  background-color: var(--dark-bg);
+  color: #ffffff;
+  border-color: var(--dark-bg);
+}
+
+.btn-dark:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: var(--dark-bg);
+}
+
+.btn-sm {
+  padding: 0.65rem 1.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+}
+
+.btn-lg {
+  padding: 1.1rem 2.5rem;
+  font-size: 0.82rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Top Announcement Bar (Clean Hairline)
+   -------------------------------------------------------------------------- */
+.announcement-bar {
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.announcement-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.announcement-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.announcement-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.announcement-item i {
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+.announcement-item a:hover {
+  color: var(--primary);
+}
+
+.announcement-tag {
+  color: var(--primary);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Site Header & Navigation (Airy & Clean)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(252, 251, 250, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 100;
+  transition: background-color var(--transition-fast);
+}
+
+.site-header.is-scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.site-logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.site-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-logo-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.site-logo-kanji {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  letter-spacing: 0.3em;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.2rem;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-body);
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--primary);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-light);
+  padding: 0.55rem;
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section (Airy, Minimalist Editorial)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: calc(84vh - var(--header-height));
+  align-items: center;
+}
+
+.hero-content {
+  padding: 4.5rem 4rem 4.5rem 0;
+}
+
+.hero-title {
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.hero-lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.85;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.hero-features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.hero-feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hero-feature-title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-main);
+}
+
+.hero-feature-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.hero-visual {
+  position: relative;
+  height: 520px;
+}
+
+.hero-image-wrap {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: 2rem;
+  left: -2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 1.35rem 1.65rem;
+  max-width: 250px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.hero-card-number {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.hero-card-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   Quick Highlights Bar (Clean Minimal Dividers)
+   -------------------------------------------------------------------------- */
+.highlights-bar {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  padding: 2.5rem 0;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.highlight-icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.highlight-text h4 {
+  font-size: 0.9rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.highlight-text p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Treatments & Services Section (Clean Frameless Cards)
+   -------------------------------------------------------------------------- */
+.services-section {
+  padding: var(--section-pad);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.4rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.service-card:hover {
+  border-color: var(--primary-border);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.service-image-box {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.service-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.service-card:hover .service-image-box img {
+  transform: scale(1.03);
+}
+
+.service-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--border-light);
+  font-weight: 500;
+}
+
+.service-badge.rmt {
+  color: var(--accent-green);
+  border-color: rgba(61, 104, 82, 0.25);
+  background: #ffffff;
+}
+
+.service-body {
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.service-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.service-duration {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.service-title {
+  font-size: 1.45rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.3;
+}
+
+.service-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.service-benefits {
+  list-style: none;
+  margin-bottom: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.service-benefits li {
+  font-size: 0.82rem;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.service-benefits li i {
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+.service-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.service-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-price-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+}
+
+.service-price-val {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   Acuity Scheduling Section (Serene & Clean)
+   -------------------------------------------------------------------------- */
+.acuity-booking-section {
+  background-color: var(--bg-main);
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.acuity-container-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.acuity-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 2rem;
+}
+
+.acuity-badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-green);
+  background: var(--accent-green-bg);
+  padding: 0.3rem 0.75rem;
+  border: 1px solid rgba(61, 104, 82, 0.2);
+  font-weight: 500;
+}
+
+.acuity-badge-live .pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-green);
+  display: inline-block;
+}
+
+.acuity-frame-wrap {
+  width: 100%;
+  min-height: 620px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+}
+
+.acuity-frame-wrap iframe {
+  width: 100%;
+  height: 620px;
+  border: none;
+}
+
+.acuity-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.acuity-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.acuity-step-number {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--primary);
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--primary-border);
+  background: var(--primary-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.acuity-step-content h4 {
+  font-size: 0.88rem;
+  font-family: var(--font-display);
+  margin-bottom: 0.25rem;
+}
+
+.acuity-step-content p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   Direct Insurance Billing (Minimalist Clean)
+   -------------------------------------------------------------------------- */
+.insurance-section {
+  padding: var(--section-pad);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.insurance-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.insurance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-green);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.insurance-text h2 {
+  margin-bottom: 1.35rem;
+}
+
+.insurance-text p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 1.85rem;
+}
+
+.insurance-checklist {
+  list-style: none;
+  margin-bottom: 2.2rem;
+}
+
+.insurance-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--text-body);
+  margin-bottom: 0.85rem;
+}
+
+.insurance-checklist li i {
+  color: var(--primary);
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.insurance-providers-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 3rem;
+}
+
+.insurance-providers-card h3 {
+  font-size: 1.15rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.insurance-providers-card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.85rem;
+}
+
+.provider-tags-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.provider-tag {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--text-body);
+  transition: all var(--transition-fast);
+}
+
+.provider-tag:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #ffffff;
+}
+
+.provider-tag i {
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Price Menu (Editorial Minimalist Table)
+   -------------------------------------------------------------------------- */
+.pricing-section {
+  padding: var(--section-pad);
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pricing-table-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  margin-bottom: 4rem;
+  overflow-x: auto;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.pricing-table th, .pricing-table td {
+  padding: 1.35rem 1.85rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pricing-table th {
+  background: var(--bg-surface);
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.pricing-table td {
+  font-size: 0.9rem;
+}
+
+.pricing-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pricing-table tr:hover td {
+  background: var(--primary-subtle);
+}
+
+.treatment-col-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-main);
+}
+
+.treatment-col-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.price-val-highlight {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--primary-dark);
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.addon-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 1.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.addon-card:hover {
+  border-color: var(--primary);
+}
+
+.addon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.65rem;
+}
+
+.addon-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.addon-price {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.addon-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   About & Philosophy ("和熙元")
+   -------------------------------------------------------------------------- */
+.about-section {
+  padding: var(--section-pad);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border: 1px solid var(--border-light);
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.about-seal-card {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.about-seal-kanji {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--primary);
+  letter-spacing: 0.25em;
+}
+
+.about-seal-meaning {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.about-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.philosophy-point h4 {
+  font-size: 0.88rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.philosophy-point h4 i {
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+.philosophy-point p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Reviews & Testimonials (Light Editorial Cards)
+   -------------------------------------------------------------------------- */
+.reviews-section {
+  padding: var(--section-pad);
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.reviews-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 1.25rem 2rem;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+}
+
+.rating-stars {
+  color: var(--primary);
+  font-size: 1rem;
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.rating-score {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--text-main);
+}
+
+.rating-source {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.review-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.review-card:hover {
+  border-color: var(--primary);
+}
+
+.review-quote {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  font-style: italic;
+  margin-bottom: 1.85rem;
+}
+
+.review-author-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.author-info h4 {
+  font-size: 0.85rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+
+.author-treatment {
+  font-size: 0.72rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.verified-badge {
+  font-size: 0.7rem;
+  color: var(--accent-green);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* --------------------------------------------------------------------------
+   FAQ Accordion (Crisp Minimalist Lines)
+   -------------------------------------------------------------------------- */
+.faq-section {
+  padding: var(--section-pad);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  margin-bottom: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-item.active {
+  border-color: var(--primary);
+}
+
+.faq-header {
+  padding: 1.35rem 1.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-main);
+}
+
+.faq-icon {
+  color: var(--primary);
+  font-size: 0.85rem;
+  transition: transform var(--transition-fast);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-body {
+  padding: 0 1.85rem 1.6rem 1.85rem;
+  display: none;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.faq-item.active .faq-body {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Location, Hours & Netlify Contact Form
+   -------------------------------------------------------------------------- */
+.contact-section {
+  padding: var(--section-pad);
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.clinic-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.clinic-info-card h2 {
+  margin-bottom: 2rem;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.85rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-detail-icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+
+.contact-detail-content h4 {
+  font-size: 0.8rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.contact-detail-content p, .contact-detail-content a {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.contact-detail-content a:hover {
+  color: var(--primary);
+}
+
+.hours-table {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.5rem;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.65rem;
+}
+
+.hours-row.highlight {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* Clean Contact Form */
+.contact-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 3rem;
+}
+
+.contact-form-card h3 {
+  font-size: 1.65rem;
+  margin-bottom: 0.4rem;
+}
+
+.contact-form-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.35rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  margin-bottom: 0.45rem;
+}
+
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Footer (Refined & Minimalist)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  padding: 5.5rem 0 2.5rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.85fr 0.85fr 1.1fr;
+  gap: 3.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.footer-brand .site-logo-img {
+  filter: brightness(0) invert(1);
+  mix-blend-mode: screen;
+  height: 40px;
+  margin-bottom: 1.2rem;
+}
+
+.footer-brand p {
+  color: var(--dark-muted);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  max-width: 300px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-col h4 {
+  font-size: 0.8rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--dark-muted);
+  font-size: 0.82rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--primary-light);
+}
+
+.footer-acuity-box {
+  background: var(--dark-surface);
+  border: 1px solid var(--dark-border);
+  padding: 1.5rem;
+}
+
+.footer-acuity-box h5 {
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-family: var(--font-display);
+  margin-bottom: 0.4rem;
+}
+
+.footer-acuity-box p {
+  font-size: 0.78rem;
+  color: var(--dark-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--dark-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.76rem;
+  color: var(--dark-muted);
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-legal-links a:hover {
+  color: var(--primary-light);
+}
+
+/* --------------------------------------------------------------------------
+   Acuity Scheduling Modal
+   -------------------------------------------------------------------------- */
+.acuity-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(22, 19, 17, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.acuity-modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.acuity-modal-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 920px;
+  height: 85vh;
+  max-height: 780px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  background: var(--bg-surface);
+  padding: 1.1rem 1.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-title-group h3 {
+  font-size: 1.05rem;
+  font-family: var(--font-display);
+}
+
+.modal-selected-service {
+  font-size: 0.72rem;
+  color: var(--primary);
+  background: var(--primary-subtle);
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--primary-border);
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.modal-close-btn:hover {
+  color: var(--text-main);
+}
+
+.modal-body {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+.modal-body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --------------------------------------------------------------------------
+   Toast Notification
+   -------------------------------------------------------------------------- */
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--primary);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all var(--transition-smooth);
+}
+
+.toast-notification.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-notification i {
+  color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Navigation Drawer
+   -------------------------------------------------------------------------- */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: var(--bg-card);
+  z-index: 200;
+  padding: 2.5rem 2rem;
+  transform: translateX(100%);
+  transition: transform var(--transition-smooth);
+  border-left: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-nav-drawer.active {
+  transform: translateX(0);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 2.5rem 0;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  display: block;
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary);
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 199;
+  display: none;
+}
+
+.drawer-backdrop.active {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-content {
+    padding: 3.5rem 0 2.5rem 0;
+  }
+  .hero-visual {
+    height: 400px;
+  }
+  .hero-floating-card {
+    left: 1rem;
+    bottom: 1rem;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .insurance-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .addons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .main-nav {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .hero-features-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .acuity-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .provider-tags-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .announcement-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.35rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+}
