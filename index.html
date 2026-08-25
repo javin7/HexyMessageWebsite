@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>BEST LIFE 和熙元 | Registered Massage Therapy & Eastern Holistic Clinic</title>
-  <meta name="description" content="Experience professional Registered Massage Therapy (RMT), Traditional Tuina, Fire Cupping, and Japanese Head Spa in Toronto. Direct insurance billing available.">
-  <meta name="keywords" content="Massage Therapy Toronto, RMT Massage, Tuina, Acupressure, Cupping Therapy, Direct Billing Massage, Head Spa, BEST LIFE 和熙元">
+  <meta name="description" content="Experience professional Registered Massage Therapy (RMT), Traditional Tuina, Fire Cupping, and Japanese Head Spa at 530 Yonge St, Unit 2, Toronto. Direct insurance billing available.">
+  <meta name="keywords" content="Massage Therapy Toronto, RMT Massage, Tuina, Acupressure, Cupping Therapy, Direct Billing Massage, Head Spa, BEST LIFE 和熙元, 530 Yonge St">
   
   <!-- OpenGraph / Social Meta Tags -->
   <meta property="og:type" content="website">
@@ -30,15 +30,15 @@
     "@type": "MedicalBusiness",
     "name": "BEST LIFE 和熙元 Massage Therapy",
     "image": "assets/images/hero-spa.jpg",
-    "telephone": "+1-416-939-8888",
+    "telephone": "+1-416-878-9887",
     "email": "info@bestlifemassage.com",
     "url": "https://bestlifemassage.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "403 Dundas St. West",
+      "streetAddress": "530 Yonge St, Unit 2",
       "addressLocality": "Toronto",
       "addressRegion": "ON",
-      "postalCode": "M5T 1G6",
+      "postalCode": "M4Y 1X9",
       "addressCountry": "CA"
     },
     "priceRange": "$70 - $220",
@@ -72,19 +72,19 @@
       <div class="announcement-info">
         <div class="announcement-item">
           <i class="fa-solid fa-location-dot"></i>
-          <span>403 Dundas St. West, Toronto, ON</span>
+          <span data-i18n="announcement_address">530 Yonge St, Unit 2, Toronto, ON</span>
         </div>
         <div class="announcement-item">
           <i class="fa-solid fa-phone"></i>
-          <a href="tel:14169398888">(416) 939-8888</a>
+          <a href="tel:14168789887">(416) 878-9887</a>
         </div>
       </div>
       <div class="announcement-info">
         <div class="announcement-item">
           <i class="fa-solid fa-shield-halved"></i>
-          <span>Direct Insurance Billing Available</span>
+          <span data-i18n="announcement_billing">Direct Insurance Billing Available</span>
         </div>
-        <span class="announcement-tag">Acuity Online Booking</span>
+        <span class="announcement-tag" data-i18n="announcement_booking">Acuity Online Booking</span>
       </div>
     </div>
   </div>
@@ -103,18 +103,22 @@
       <!-- Desktop Navigation -->
       <nav class="main-nav" aria-label="Primary Navigation">
         <ul class="nav-links">
-          <li><a href="#services" class="nav-link">Treatments</a></li>
-          <li><a href="#direct-billing" class="nav-link">Direct Billing</a></li>
-          <li><a href="#pricing" class="nav-link">Price Menu</a></li>
-          <li><a href="#about" class="nav-link">Philosophy</a></li>
-          <li><a href="#reviews" class="nav-link">Reviews</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav_treatments">Treatments</a></li>
+          <li><a href="#direct-billing" class="nav-link" data-i18n="nav_billing">Direct Billing</a></li>
+          <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Price Menu</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_philosophy">Philosophy</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="nav_reviews">Reviews</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
 
       <!-- Header Actions -->
       <div class="header-actions">
-        <button class="btn btn-primary btn-sm js-book-trigger" data-service="General Appointment">
+        <!-- Language Switcher Button -->
+        <button class="btn btn-outline btn-sm js-lang-toggle" aria-label="Switch Language / 切换语言">
+          <i class="fa-solid fa-globe"></i> <span class="lang-label">中文</span>
+        </button>
+        <button class="btn btn-primary btn-sm js-book-trigger" data-service="General Appointment" data-i18n="btn_book_appointment">
           Book Appointment
         </button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
@@ -137,18 +141,24 @@
       </button>
     </div>
     <ul class="mobile-nav-links">
-      <li><a href="#services" class="mobile-nav-link">Treatments</a></li>
-      <li><a href="#booking" class="mobile-nav-link">Acuity Booking</a></li>
-      <li><a href="#direct-billing" class="mobile-nav-link">Direct Billing</a></li>
-      <li><a href="#pricing" class="mobile-nav-link">Price Menu</a></li>
-      <li><a href="#about" class="mobile-nav-link">Philosophy</a></li>
-      <li><a href="#reviews" class="mobile-nav-link">Reviews</a></li>
+      <li><a href="#services" class="mobile-nav-link" data-i18n="nav_treatments">Treatments</a></li>
+      <li><a href="#booking" class="mobile-nav-link" data-i18n="nav_booking">Acuity Booking</a></li>
+      <li><a href="#direct-billing" class="mobile-nav-link" data-i18n="nav_billing">Direct Billing</a></li>
+      <li><a href="#pricing" class="mobile-nav-link" data-i18n="nav_pricing">Price Menu</a></li>
+      <li><a href="#about" class="mobile-nav-link" data-i18n="nav_philosophy">Philosophy</a></li>
+      <li><a href="#reviews" class="mobile-nav-link" data-i18n="nav_reviews">Reviews</a></li>
       <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
-      <li><a href="#contact" class="mobile-nav-link">Location & Contact</a></li>
+      <li><a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Location & Contact</a></li>
     </ul>
-    <button class="btn btn-primary btn-block js-book-trigger" data-service="Mobile Consultation">
-      Book Appointment
-    </button>
+    
+    <div style="display:flex; flex-direction:column; gap:0.75rem;">
+      <button class="btn btn-outline btn-block js-lang-toggle">
+        <i class="fa-solid fa-globe"></i> <span class="lang-label">中文</span>
+      </button>
+      <button class="btn btn-primary btn-block js-book-trigger" data-service="Mobile Consultation" data-i18n="btn_book_appointment">
+        Book Appointment
+      </button>
+    </div>
   </aside>
 
   <main id="main-content">
@@ -157,33 +167,33 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <span class="subtitle-badge">Registered RMTs & Holistic Bodywork</span>
+            <span class="subtitle-badge" data-i18n="hero_badge">Registered RMTs & Holistic Bodywork</span>
             <h1 class="heading-xl hero-title">
-              Restorative Bodywork, <br><span>Deep Inner Harmony.</span>
+              <span data-i18n="hero_title_1">Restorative Bodywork,</span> <br><span data-i18n="hero_title_2">Deep Inner Harmony.</span>
             </h1>
-            <p class="hero-lead">
+            <p class="hero-lead" data-i18n="hero_lead">
               Welcome to <strong>BEST LIFE 和熙元</strong>. Where clinical anatomical precision meets ancient Eastern healing traditions. Experience specialized deep tissue therapy, traditional Tuina acupressure, fire cupping, and rejuvenating head spa treatments.
             </p>
             <div class="hero-cta-group">
-              <button class="btn btn-primary btn-lg js-book-trigger" data-service="Initial Treatment">
+              <button class="btn btn-primary btn-lg js-book-trigger" data-service="Initial Treatment" data-i18n="hero_btn_book">
                 Book With Acuity
               </button>
-              <a href="#services" class="btn btn-outline btn-lg">
+              <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero_btn_services">
                 Explore Services
               </a>
             </div>
             <div class="hero-features-list">
               <div class="hero-feature-item">
-                <span class="hero-feature-title">Licensed RMTs</span>
-                <span class="hero-feature-desc">Official medical receipts for insurance reimbursement.</span>
+                <span class="hero-feature-title" data-i18n="hero_feature_1_title">Licensed RMTs</span>
+                <span class="hero-feature-desc" data-i18n="hero_feature_1_desc">Official medical receipts for insurance reimbursement.</span>
               </div>
               <div class="hero-feature-item">
-                <span class="hero-feature-title">Direct Billing</span>
-                <span class="hero-feature-desc">Canada Life, Sun Life, Manulife, Green Shield, and more.</span>
+                <span class="hero-feature-title" data-i18n="hero_feature_2_title">Direct Billing</span>
+                <span class="hero-feature-desc" data-i18n="hero_feature_2_desc">Canada Life, Sun Life, Manulife, Green Shield, and more.</span>
               </div>
               <div class="hero-feature-item">
-                <span class="hero-feature-title">7 Days a Week</span>
-                <span class="hero-feature-desc">Convenient downtown location with flexible hours.</span>
+                <span class="hero-feature-title" data-i18n="hero_feature_3_title">7 Days a Week</span>
+                <span class="hero-feature-desc" data-i18n="hero_feature_3_desc">Convenient downtown location with flexible hours.</span>
               </div>
             </div>
           </div>
@@ -194,7 +204,7 @@
             </div>
             <div class="hero-floating-card">
               <div class="hero-card-number">4.9 ★</div>
-              <div class="hero-card-label">2,100+ Verified Patient Reviews</div>
+              <div class="hero-card-label" data-i18n="hero_rating_badge">2,100+ Verified Patient Reviews</div>
             </div>
           </div>
         </div>
@@ -208,29 +218,29 @@
           <div class="highlight-card">
             <div class="highlight-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
             <div class="highlight-text">
-              <h4>Direct Insurance Billing</h4>
-              <p>We bill directly to your extended health benefit provider.</p>
+              <h4 data-i18n="highlight_1_title">Direct Insurance Billing</h4>
+              <p data-i18n="highlight_1_desc">We bill directly to your extended health benefit provider.</p>
             </div>
           </div>
           <div class="highlight-card">
             <div class="highlight-icon"><i class="fa-solid fa-user-doctor"></i></div>
             <div class="highlight-text">
-              <h4>Registered Massage Therapists</h4>
-              <p>Certified clinicians adhering to highest college standards.</p>
+              <h4 data-i18n="highlight_2_title">Registered Massage Therapists</h4>
+              <p data-i18n="highlight_2_desc">Certified clinicians adhering to highest college standards.</p>
             </div>
           </div>
           <div class="highlight-card">
             <div class="highlight-icon"><i class="fa-solid fa-yin-yang"></i></div>
             <div class="highlight-text">
-              <h4>Traditional Eastern Wisdom</h4>
-              <p>Meridian acupressure, fire cupping, and Gua Sha techniques.</p>
+              <h4 data-i18n="highlight_3_title">Traditional Eastern Wisdom</h4>
+              <p data-i18n="highlight_3_desc">Meridian acupressure, fire cupping, and Gua Sha techniques.</p>
             </div>
           </div>
           <div class="highlight-card">
             <div class="highlight-icon"><i class="fa-solid fa-clock"></i></div>
             <div class="highlight-text">
-              <h4>Seamless Online Booking</h4>
-              <p>Instant confirmation & automated calendar reminders via Acuity.</p>
+              <h4 data-i18n="highlight_4_title">Seamless Online Booking</h4>
+              <p data-i18n="highlight_4_desc">Instant confirmation & automated calendar reminders via Acuity.</p>
             </div>
           </div>
         </div>
@@ -241,17 +251,17 @@
     <section class="services-section fade-in-section" id="services">
       <div class="container">
         <div class="section-header">
-          <span class="subtitle-badge">Curated Therapies</span>
-          <h2 class="heading-lg">Specialized Massage & Holistic Care</h2>
-          <p>Each treatment is thoughtfully customized by our certified practitioners to alleviate pain, release chronic muscular tension, and restore internal equilibrium.</p>
+          <span class="subtitle-badge" data-i18n="services_badge">Curated Therapies</span>
+          <h2 class="heading-lg" data-i18n="services_title">Specialized Massage & Holistic Care</h2>
+          <p data-i18n="services_subtitle">Each treatment is thoughtfully customized by our certified practitioners to alleviate pain, release chronic muscular tension, and restore internal equilibrium.</p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all">All Treatments</button>
-          <button class="filter-btn" data-filter="rmt">Registered RMT Massage</button>
-          <button class="filter-btn" data-filter="eastern">TCM & Tuina Acupressure</button>
-          <button class="filter-btn" data-filter="wellness">Specialty Wellness</button>
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Treatments</button>
+          <button class="filter-btn" data-filter="rmt" data-i18n="filter_rmt">Registered RMT Massage</button>
+          <button class="filter-btn" data-filter="eastern" data-i18n="filter_eastern">TCM & Tuina Acupressure</button>
+          <button class="filter-btn" data-filter="wellness" data-i18n="filter_wellness">Specialty Wellness</button>
         </div>
 
         <!-- Services Grid -->
@@ -261,28 +271,28 @@
           <article class="service-card" data-category="rmt">
             <div class="service-image-box">
               <img src="assets/images/service-deep-tissue.jpg" alt="Deep Tissue RMT Massage Therapy" width="600" height="450" loading="lazy">
-              <span class="service-badge rmt">RMT Insured</span>
+              <span class="service-badge rmt" data-i18n="s1_badge">RMT Insured</span>
             </div>
             <div class="service-body">
               <div class="service-meta">
-                <span class="service-tag">Therapeutic</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 / 90 / 120 Min</span>
+                <span class="service-tag" data-i18n="s1_tag">Therapeutic</span>
+                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s1_duration">60 / 90 / 120 Min</span></span>
               </div>
-              <h3 class="service-title">Deep Tissue & Myofascial RMT</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-i18n="s1_title">Deep Tissue & Myofascial RMT</h3>
+              <p class="service-desc" data-i18n="s1_desc">
                 Targeted deep muscular release designed to eliminate chronic tension knots, alleviate lower back pain, neck stiffness, and rehabilitate repetitive strain injuries.
               </p>
               <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> Releases deep myofascial trigger points</li>
-                <li><i class="fa-solid fa-check"></i> Postural realignment & joint mobility</li>
-                <li><i class="fa-solid fa-check"></i> Covered by extended health insurance</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_b1">Releases deep myofascial trigger points</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_b2">Postural realignment & joint mobility</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_b3">Covered by extended health insurance</span></li>
               </ul>
               <div class="service-footer">
                 <div class="service-price">
-                  <span class="service-price-label">From</span>
-                  <span class="service-price-val">$120 / hr</span>
+                  <span class="service-price-label" data-i18n="s1_price_label">From</span>
+                  <span class="service-price-val" data-i18n="s1_price">$120 / hr</span>
                 </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Deep Tissue RMT Massage">
+                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Deep Tissue RMT Massage" data-i18n="btn_book_service">
                   Book Service
                 </button>
               </div>
@@ -293,28 +303,28 @@
           <article class="service-card" data-category="eastern">
             <div class="service-image-box">
               <img src="assets/images/service-tuina.jpg" alt="Traditional Chinese Tuina Acupressure Massage" width="600" height="450" loading="lazy">
-              <span class="service-badge">Ancient Eastern</span>
+              <span class="service-badge" data-i18n="s2_badge">Ancient Eastern</span>
             </div>
             <div class="service-body">
               <div class="service-meta">
-                <span class="service-tag">Traditional TCM</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> 45 / 60 / 90 Min</span>
+                <span class="service-tag" data-i18n="s2_tag">Traditional TCM</span>
+                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s2_duration">45 / 60 / 90 Min</span></span>
               </div>
-              <h3 class="service-title">Traditional Chinese Tuina (推拿)</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-i18n="s2_title">Traditional Chinese Tuina (推拿)</h3>
+              <p class="service-desc" data-i18n="s2_desc">
                 Dynamic meridian bodywork combining rhythmic pressing, rolling, and stretching techniques to unblock Qi energy channels and optimize vital circulation.
               </p>
               <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> Unblocks vital meridian energy channels</li>
-                <li><i class="fa-solid fa-check"></i> Relieves stubborn sciatica & frozen shoulder</li>
-                <li><i class="fa-solid fa-check"></i> Harmonizes organ functions & vitality</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_b1">Unblocks vital meridian energy channels</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_b2">Relieves stubborn sciatica & frozen shoulder</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_b3">Harmonizes organ functions & vitality</span></li>
               </ul>
               <div class="service-footer">
                 <div class="service-price">
-                  <span class="service-price-label">From</span>
-                  <span class="service-price-val">$110 / hr</span>
+                  <span class="service-price-label" data-i18n="s2_price_label">From</span>
+                  <span class="service-price-val" data-i18n="s2_price">$110 / hr</span>
                 </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Traditional Chinese Tuina">
+                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Traditional Chinese Tuina" data-i18n="btn_book_service">
                   Book Service
                 </button>
               </div>
@@ -325,28 +335,28 @@
           <article class="service-card" data-category="eastern">
             <div class="service-image-box">
               <img src="assets/images/service-cupping.jpg" alt="Therapeutic Fire Cupping and Gua Sha" width="600" height="450" loading="lazy">
-              <span class="service-badge">Detox & Circulation</span>
+              <span class="service-badge" data-i18n="s3_badge">Detox & Circulation</span>
             </div>
             <div class="service-body">
               <div class="service-meta">
-                <span class="service-tag">Decompression</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> 45 / 60 Min</span>
+                <span class="service-tag" data-i18n="s3_tag">Decompression</span>
+                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s3_duration">45 / 60 Min</span></span>
               </div>
-              <h3 class="service-title">Therapeutic Fire Cupping & Gua Sha</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-i18n="s3_title">Therapeutic Fire Cupping & Gua Sha</h3>
+              <p class="service-desc" data-i18n="s3_desc">
                 Ancient negative-pressure therapy and jade Gua Sha scraping to draw out metabolic stagnation, promote micro-circulation, and rapidly reduce inflammation.
               </p>
               <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> Fascial decompression & lymphatic drainage</li>
-                <li><i class="fa-solid fa-check"></i> Expels deep body dampness & chills</li>
-                <li><i class="fa-solid fa-check"></i> Immediate upper back & trapezius relief</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_b1">Fascial decompression & lymphatic drainage</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_b2">Expels deep body dampness & chills</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_b3">Immediate upper back & trapezius relief</span></li>
               </ul>
               <div class="service-footer">
                 <div class="service-price">
-                  <span class="service-price-label">From</span>
-                  <span class="service-price-val">$95 / session</span>
+                  <span class="service-price-label" data-i18n="s3_price_label">From</span>
+                  <span class="service-price-val" data-i18n="s3_price">$95 / session</span>
                 </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Fire Cupping & Gua Sha">
+                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Fire Cupping & Gua Sha" data-i18n="btn_book_service">
                   Book Service
                 </button>
               </div>
@@ -357,28 +367,28 @@
           <article class="service-card" data-category="wellness">
             <div class="service-image-box">
               <img src="assets/images/service-head-spa.jpg" alt="Japanese Zen Scalp and Head Spa" width="600" height="450" loading="lazy">
-              <span class="service-badge">Signature Zen</span>
+              <span class="service-badge" data-i18n="s4_badge">Signature Zen</span>
             </div>
             <div class="service-body">
               <div class="service-meta">
-                <span class="service-tag">Head Spa</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 / 90 Min</span>
+                <span class="service-tag" data-i18n="s4_tag">Head Spa</span>
+                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s4_duration">60 / 90 Min</span></span>
               </div>
-              <h3 class="service-title">Japanese Head Spa & Scalp Relief</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-i18n="s4_title">Japanese Head Spa & Scalp Relief</h3>
+              <p class="service-desc" data-i18n="s4_desc">
                 An immersive meditative ritual featuring gentle warm water halo cascade, organic herbal hair cleanse, acupressure scalp massage, and neck-shoulder decompression.
               </p>
               <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> Relieves migraines, insomnia & mental fatigue</li>
-                <li><i class="fa-solid fa-check"></i> Stimulates micro-circulation in hair follicles</li>
-                <li><i class="fa-solid fa-check"></i> Deep sensory relaxation with warm mist</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_b1">Relieves migraines, insomnia & mental fatigue</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_b2">Stimulates micro-circulation in hair follicles</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_b3">Deep sensory relaxation with warm mist</span></li>
               </ul>
               <div class="service-footer">
                 <div class="service-price">
-                  <span class="service-price-label">From</span>
-                  <span class="service-price-val">$135 / session</span>
+                  <span class="service-price-label" data-i18n="s4_price_label">From</span>
+                  <span class="service-price-val" data-i18n="s4_price">$135 / session</span>
                 </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Japanese Head Spa">
+                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Japanese Head Spa" data-i18n="btn_book_service">
                   Book Service
                 </button>
               </div>
@@ -389,28 +399,28 @@
           <article class="service-card" data-category="wellness">
             <div class="service-image-box">
               <img src="assets/images/service-hot-stone.jpg" alt="Heated Volcanic Stone Relaxation Massage" width="600" height="450" loading="lazy">
-              <span class="service-badge">Thermal Therapy</span>
+              <span class="service-badge" data-i18n="s5_badge">Thermal Therapy</span>
             </div>
             <div class="service-body">
               <div class="service-meta">
-                <span class="service-tag">Restorative</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 / 90 Min</span>
+                <span class="service-tag" data-i18n="s5_tag">Restorative</span>
+                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s5_duration">60 / 90 Min</span></span>
               </div>
-              <h3 class="service-title">Volcanic Hot Stone & Aromatherapy</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-i18n="s5_title">Volcanic Hot Stone & Aromatherapy</h3>
+              <p class="service-desc" data-i18n="s5_desc">
                 Polished mineral basalt stones heated to soothing temperatures glide smoothly over tense muscles with botanical essential oils to melt away deep fatigue.
               </p>
               <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> Deep thermal penetration into tight muscles</li>
-                <li><i class="fa-solid fa-check"></i> Calms central nervous system & anxiety</li>
-                <li><i class="fa-solid fa-check"></i> Premium botanical aromatherapy blends</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_b1">Deep thermal penetration into tight muscles</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_b2">Calms central nervous system & anxiety</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_b3">Premium botanical aromatherapy blends</span></li>
               </ul>
               <div class="service-footer">
                 <div class="service-price">
-                  <span class="service-price-label">From</span>
-                  <span class="service-price-val">$130 / hr</span>
+                  <span class="service-price-label" data-i18n="s5_price_label">From</span>
+                  <span class="service-price-val" data-i18n="s5_price">$130 / hr</span>
                 </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Hot Stone & Aromatherapy">
+                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Hot Stone & Aromatherapy" data-i18n="btn_book_service">
                   Book Service
                 </button>
               </div>
@@ -421,28 +431,28 @@
           <article class="service-card" data-category="rmt">
             <div class="service-image-box">
               <img src="assets/images/service-deep-tissue.jpg" alt="Prenatal & Swedish RMT Massage" width="600" height="450" loading="lazy">
-              <span class="service-badge rmt">RMT Insured</span>
+              <span class="service-badge rmt" data-i18n="s6_badge">RMT Insured</span>
             </div>
             <div class="service-body">
               <div class="service-meta">
-                <span class="service-tag">Specialized RMT</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 / 90 Min</span>
+                <span class="service-tag" data-i18n="s6_tag">Specialized RMT</span>
+                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s6_duration">60 / 90 Min</span></span>
               </div>
-              <h3 class="service-title">Swedish Relaxation & Prenatal RMT</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-i18n="s6_title">Swedish Relaxation & Prenatal RMT</h3>
+              <p class="service-desc" data-i18n="s6_desc">
                 Gentle, rhythmic flowing strokes designed to reduce stress hormone levels, enhance lymphatic drainage, and safely support expectant mothers through pregnancy.
               </p>
               <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> Alleviates pregnancy back & pelvic strain</li>
-                <li><i class="fa-solid fa-check"></i> Specialized supportive body cushioning</li>
-                <li><i class="fa-solid fa-check"></i> Full insurance receipt provided</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_b1">Alleviates pregnancy back & pelvic strain</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_b2">Specialized supportive body cushioning</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_b3">Full insurance receipt provided</span></li>
               </ul>
               <div class="service-footer">
                 <div class="service-price">
-                  <span class="service-price-label">From</span>
-                  <span class="service-price-val">$120 / hr</span>
+                  <span class="service-price-label" data-i18n="s6_price_label">From</span>
+                  <span class="service-price-val" data-i18n="s6_price">$120 / hr</span>
                 </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Swedish & Prenatal RMT">
+                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Swedish & Prenatal RMT" data-i18n="btn_book_service">
                   Book Service
                 </button>
               </div>
@@ -457,19 +467,19 @@
     <section class="acuity-booking-section fade-in-section" id="booking">
       <div class="container">
         <div class="section-header">
-          <span class="subtitle-badge">Online Scheduling</span>
-          <h2 class="heading-lg">Book Your Session Instantly</h2>
-          <p>Select your desired treatment, duration, and preferred therapist through our secure Acuity Scheduling portal below. Real-time availability and immediate confirmation.</p>
+          <span class="subtitle-badge" data-i18n="acuity_badge">Online Scheduling</span>
+          <h2 class="heading-lg" data-i18n="acuity_title">Book Your Session Instantly</h2>
+          <p data-i18n="acuity_desc">Select your desired treatment, duration, and preferred therapist through our secure Acuity Scheduling portal below. Real-time availability and immediate confirmation.</p>
         </div>
 
         <div class="acuity-container-card">
           <div class="acuity-top-bar">
             <div class="acuity-clinic-info">
               <span class="site-logo-title">BEST LIFE 和熙元</span>
-              <span class="acuity-badge-live"><span class="pulse-dot"></span> Live Booking Portal</span>
+              <span class="acuity-badge-live"><span class="pulse-dot"></span> <span data-i18n="acuity_portal_badge">Live Booking Portal</span></span>
             </div>
             <button class="btn btn-outline btn-sm js-book-trigger" data-service="Acuity Direct Booking">
-              <i class="fa-solid fa-up-right-from-square"></i> Open Fullscreen Window
+              <i class="fa-solid fa-up-right-from-square"></i> <span data-i18n="acuity_btn_fullscreen">Open Fullscreen Window</span>
             </button>
           </div>
 
@@ -483,22 +493,22 @@
             <div class="acuity-step-item">
               <div class="acuity-step-number">1</div>
               <div class="acuity-step-content">
-                <h4>Select Treatment</h4>
-                <p>Choose your preferred service (RMT, Tuina, Cupping, or Head Spa) and session duration.</p>
+                <h4 data-i18n="acuity_step1_title">Select Treatment</h4>
+                <p data-i18n="acuity_step1_desc">Choose your preferred service (RMT, Tuina, Cupping, or Head Spa) and session duration.</p>
               </div>
             </div>
             <div class="acuity-step-item">
               <div class="acuity-step-number">2</div>
               <div class="acuity-step-content">
-                <h4>Pick Date & Practitioner</h4>
-                <p>View real-time open slots and choose your dedicated Registered Massage Therapist.</p>
+                <h4 data-i18n="acuity_step2_title">Pick Date & Practitioner</h4>
+                <p data-i18n="acuity_step2_desc">View real-time open slots and choose your dedicated Registered Massage Therapist.</p>
               </div>
             </div>
             <div class="acuity-step-item">
               <div class="acuity-step-number">3</div>
               <div class="acuity-step-content">
-                <h4>Instant Confirmation</h4>
-                <p>Receive immediate email and SMS confirmations with easy calendar syncing.</p>
+                <h4 data-i18n="acuity_step3_title">Instant Confirmation</h4>
+                <p data-i18n="acuity_step3_desc">Receive immediate email and SMS confirmations with easy calendar syncing.</p>
               </div>
             </div>
           </div>
@@ -511,24 +521,24 @@
       <div class="container">
         <div class="insurance-wrapper">
           <div class="insurance-text">
-            <span class="insurance-badge"><i class="fa-solid fa-shield-check"></i> Direct Billing Accepted</span>
-            <h2 class="heading-lg">Hassle-Free Direct Billing to Your Insurance</h2>
-            <p>
+            <span class="insurance-badge"><i class="fa-solid fa-shield-check"></i> <span data-i18n="billing_badge">Direct Billing Accepted</span></span>
+            <h2 class="heading-lg" data-i18n="billing_title">Hassle-Free Direct Billing to Your Insurance</h2>
+            <p data-i18n="billing_desc">
               Don't worry about out-of-pocket expenses and tedious paperwork. We bill directly to over 20+ major Canadian private insurance providers on the spot for all Registered Massage Therapy (RMT) sessions.
             </p>
             <ul class="insurance-checklist">
-              <li><i class="fa-solid fa-check"></i> <strong>Zero Paperwork:</strong> We submit claims electronically during your checkout.</li>
-              <li><i class="fa-solid fa-check"></i> <strong>Pay Only The Co-Pay:</strong> If your plan covers 80%–100%, you only pay the remaining balance.</li>
-              <li><i class="fa-solid fa-check"></i> <strong>Official RMT Receipts:</strong> Issued instantly for any manual or secondary claim submissions.</li>
+              <li><i class="fa-solid fa-check"></i> <span data-i18n="billing_check1"><strong>Zero Paperwork:</strong> We submit claims electronically during your checkout.</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-i18n="billing_check2"><strong>Pay Only The Co-Pay:</strong> If your plan covers 80%–100%, you only pay the remaining balance.</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-i18n="billing_check3"><strong>Official RMT Receipts:</strong> Issued instantly for any manual or secondary claim submissions.</span></li>
             </ul>
-            <button class="btn btn-primary js-book-trigger" data-service="Insurance RMT Session">
+            <button class="btn btn-primary js-book-trigger" data-service="Insurance RMT Session" data-i18n="billing_btn">
               Book An Insured Treatment
             </button>
           </div>
 
           <div class="insurance-providers-card">
-            <h3>Accepted Insurance Providers</h3>
-            <p>We connect directly with Telus Health, Provider Connect, and eClaims networks:</p>
+            <h3 data-i18n="billing_providers_title">Accepted Insurance Providers</h3>
+            <p data-i18n="billing_providers_desc">We connect directly with Telus Health, Provider Connect, and eClaims networks:</p>
             <div class="provider-tags-grid">
               <div class="provider-tag"><i class="fa-solid fa-check"></i> Sun Life Financial</div>
               <div class="provider-tag"><i class="fa-solid fa-check"></i> Manulife Financial</div>
@@ -550,87 +560,87 @@
     <section class="pricing-section fade-in-section" id="pricing">
       <div class="container">
         <div class="section-header">
-          <span class="subtitle-badge">Transparent Pricing</span>
-          <h2 class="heading-lg">Session Rates & Duration Menu</h2>
-          <p>Straightforward, competitive pricing with no hidden charges. Custom duration packages available for tailored wellness plans.</p>
+          <span class="subtitle-badge" data-i18n="pricing_badge">Transparent Pricing</span>
+          <h2 class="heading-lg" data-i18n="pricing_title">Session Rates & Duration Menu</h2>
+          <p data-i18n="pricing_desc">Straightforward, competitive pricing with no hidden charges. Custom duration packages available for tailored wellness plans.</p>
         </div>
 
         <div class="pricing-table-wrapper">
           <table class="pricing-table">
             <thead>
               <tr>
-                <th>Service Name</th>
+                <th data-i18n="th_service">Service Name</th>
                 <th>30 Min</th>
                 <th>45 Min</th>
                 <th>60 Min</th>
                 <th>90 Min</th>
-                <th>Action</th>
+                <th data-i18n="th_action">Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <div class="treatment-col-title">Registered Massage Therapy (RMT)</div>
-                  <div class="treatment-col-desc">Deep tissue, Swedish relaxation, prenatal & sports therapy</div>
+                  <div class="treatment-col-title" data-i18n="s1_title">Registered Massage Therapy (RMT)</div>
+                  <div class="treatment-col-desc" data-i18n="s1_desc">Deep tissue, Swedish relaxation, prenatal & sports therapy</div>
                 </td>
                 <td><span class="price-val-highlight">$70</span></td>
                 <td><span class="price-val-highlight">$95</span></td>
                 <td><span class="price-val-highlight">$120</span></td>
                 <td><span class="price-val-highlight">$175</span></td>
                 <td>
-                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="RMT Massage">Book</button>
+                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="RMT Massage" data-i18n="pricing_btn_book">Book</button>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <div class="treatment-col-title">Traditional Chinese Tuina (推拿)</div>
-                  <div class="treatment-col-desc">Meridian acupressure bodywork, tendon release & spinal balance</div>
+                  <div class="treatment-col-title" data-i18n="s2_title">Traditional Chinese Tuina (推拿)</div>
+                  <div class="treatment-col-desc" data-i18n="s2_desc">Meridian acupressure bodywork, tendon release & spinal balance</div>
                 </td>
                 <td><span class="price-val-highlight">$65</span></td>
                 <td><span class="price-val-highlight">$85</span></td>
                 <td><span class="price-val-highlight">$110</span></td>
                 <td><span class="price-val-highlight">$160</span></td>
                 <td>
-                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="Tuina Acupressure">Book</button>
+                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="Tuina Acupressure" data-i18n="pricing_btn_book">Book</button>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <div class="treatment-col-title">Fire Cupping & Gua Sha Therapy</div>
-                  <div class="treatment-col-desc">Myofascial decompression, jade scraping & thermal toxin expulsion</div>
+                  <div class="treatment-col-title" data-i18n="s3_title">Fire Cupping & Gua Sha Therapy</div>
+                  <div class="treatment-col-desc" data-i18n="s3_desc">Myofascial decompression, jade scraping & thermal toxin expulsion</div>
                 </td>
                 <td><span class="price-val-highlight">$55</span></td>
                 <td><span class="price-val-highlight">$75</span></td>
                 <td><span class="price-val-highlight">$95</span></td>
                 <td><span class="price-val-highlight">$140</span></td>
                 <td>
-                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="Cupping & Gua Sha">Book</button>
+                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="Cupping & Gua Sha" data-i18n="pricing_btn_book">Book</button>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <div class="treatment-col-title">Japanese Head Spa & Water Halo</div>
-                  <div class="treatment-col-desc">Herbal scalp cleanse, steam infusion, cranial & neck release</div>
+                  <div class="treatment-col-title" data-i18n="s4_title">Japanese Head Spa & Water Halo</div>
+                  <div class="treatment-col-desc" data-i18n="s4_desc">Herbal scalp cleanse, steam infusion, cranial & neck release</div>
                 </td>
                 <td><span class="price-val-highlight">—</span></td>
                 <td><span class="price-val-highlight">$105</span></td>
                 <td><span class="price-val-highlight">$135</span></td>
                 <td><span class="price-val-highlight">$195</span></td>
                 <td>
-                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="Japanese Head Spa">Book</button>
+                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="Japanese Head Spa" data-i18n="pricing_btn_book">Book</button>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <div class="treatment-col-title">Volcanic Hot Stone & Aromatherapy</div>
-                  <div class="treatment-col-desc">Therapeutic basalt stone heat with organic botanical essential oils</div>
+                  <div class="treatment-col-title" data-i18n="s5_title">Volcanic Hot Stone & Aromatherapy</div>
+                  <div class="treatment-col-desc" data-i18n="s5_desc">Therapeutic basalt stone heat with organic botanical essential oils</div>
                 </td>
                 <td><span class="price-val-highlight">—</span></td>
                 <td><span class="price-val-highlight">$95</span></td>
                 <td><span class="price-val-highlight">$130</span></td>
                 <td><span class="price-val-highlight">$185</span></td>
                 <td>
-                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="Hot Stone Session">Book</button>
+                  <button class="btn btn-outline btn-sm js-book-trigger" data-service="Hot Stone Session" data-i18n="pricing_btn_book">Book</button>
                 </td>
               </tr>
             </tbody>
@@ -638,35 +648,35 @@
         </div>
 
         <!-- Add-on therapies -->
-        <h3 class="heading-sm" style="text-transform:uppercase; letter-spacing:0.12em; margin-bottom:1.5rem; text-align:center; font-size:0.95rem;">Therapeutic Add-On Options</h3>
+        <h3 class="heading-sm" style="text-transform:uppercase; letter-spacing:0.12em; margin-bottom:1.5rem; text-align:center; font-size:0.95rem;" data-i18n="addons_heading">Therapeutic Add-On Options</h3>
         <div class="addons-grid fade-in-stagger">
           <div class="addon-card">
             <div class="addon-header">
-              <span class="addon-title">Glass Fire Cupping</span>
+              <span class="addon-title" data-i18n="addon1_title">Glass Fire Cupping</span>
               <span class="addon-price">+$25</span>
             </div>
-            <p class="addon-desc">Add localized fire suction cups to back or shoulders during any massage session.</p>
+            <p class="addon-desc" data-i18n="addon1_desc">Add localized fire suction cups to back or shoulders during any massage session.</p>
           </div>
           <div class="addon-card">
             <div class="addon-header">
-              <span class="addon-title">Jade Gua Sha Scraping</span>
+              <span class="addon-title" data-i18n="addon2_title">Jade Gua Sha Scraping</span>
               <span class="addon-price">+$20</span>
             </div>
-            <p class="addon-desc">Decompresses stubborn neck and upper shoulder fascia with jade instruments.</p>
+            <p class="addon-desc" data-i18n="addon2_desc">Decompresses stubborn neck and upper shoulder fascia with jade instruments.</p>
           </div>
           <div class="addon-card">
             <div class="addon-header">
-              <span class="addon-title">Moxibustion (艾灸)</span>
+              <span class="addon-title" data-i18n="addon3_title">Moxibustion (艾灸)</span>
               <span class="addon-price">+$30</span>
             </div>
-            <p class="addon-desc">Warming mugwort herb therapy to nourish internal Qi and dispel coldness.</p>
+            <p class="addon-desc" data-i18n="addon3_desc">Warming mugwort herb therapy to nourish internal Qi and dispel coldness.</p>
           </div>
           <div class="addon-card">
             <div class="addon-header">
-              <span class="addon-title">Herbal Essential Oil</span>
+              <span class="addon-title" data-i18n="addon4_title">Herbal Essential Oil</span>
               <span class="addon-price">+$15</span>
             </div>
-            <p class="addon-desc">Custom organic essential oil blend tailored for muscle relief or deep calm.</p>
+            <p class="addon-desc" data-i18n="addon4_desc">Custom organic essential oil blend tailored for muscle relief or deep calm.</p>
           </div>
         </div>
       </div>
@@ -680,28 +690,28 @@
             <img src="assets/images/clinic-interior.jpg" alt="BEST LIFE 和熙元 Lounge & Clinic Interior" width="800" height="600" loading="lazy">
             <div class="about-seal-card">
               <div class="about-seal-kanji">和 熙 元</div>
-              <div class="about-seal-meaning">Harmony • Radiance • Source</div>
+              <div class="about-seal-meaning" data-i18n="about_seal_meaning">Harmony • Radiance • Source</div>
             </div>
           </div>
 
           <div class="about-content">
-            <span class="subtitle-badge">The Philosophy of 和熙元</span>
-            <h2 class="heading-lg">Ancient Wisdom. Certified Modern Therapy.</h2>
-            <p>
+            <span class="subtitle-badge" data-i18n="about_badge">The Philosophy of 和熙元</span>
+            <h2 class="heading-lg" data-i18n="about_title">Ancient Wisdom. Certified Modern Therapy.</h2>
+            <p data-i18n="about_p1">
               In traditional Eastern philosophy, <strong>和 (Hé)</strong> signifies dynamic balance, <strong>熙 (Xī)</strong> embodies radiant vitality and light, and <strong>元 (Yuán)</strong> represents the primal source of life and health.
             </p>
-            <p>
+            <p data-i18n="about_p2">
               At <strong>BEST LIFE 和熙元</strong>, we unite the anatomical rigor of Ontario Registered Massage Therapy with time-tested meridian bodywork and natural decompression arts. Whether you seek immediate relief from acute computer neck strain or a peaceful sanctuary to decompress your mind, our certified therapists welcome you with warm, bespoke care.
             </p>
 
             <div class="philosophy-points">
               <div class="philosophy-point">
-                <h4><i class="fa-solid fa-leaf"></i> Holistic Approach</h4>
-                <p>We treat the underlying structural imbalances rather than just masking temporary symptoms.</p>
+                <h4><i class="fa-solid fa-leaf"></i> <span data-i18n="about_point1_title">Holistic Approach</span></h4>
+                <p data-i18n="about_point1_desc">We treat the underlying structural imbalances rather than just masking temporary symptoms.</p>
               </div>
               <div class="philosophy-point">
-                <h4><i class="fa-solid fa-award"></i> Registered Excellence</h4>
-                <p>Our team holds recognized certifications ensuring clinical safety and ethical excellence.</p>
+                <h4><i class="fa-solid fa-award"></i> <span data-i18n="about_point2_title">Registered Excellence</span></h4>
+                <p data-i18n="about_point2_desc">Our team holds recognized certifications ensuring clinical safety and ethical excellence.</p>
               </div>
             </div>
           </div>
@@ -713,9 +723,9 @@
     <section class="reviews-section fade-in-section" id="reviews">
       <div class="container">
         <div class="section-header">
-          <span class="subtitle-badge">Client Testimonials</span>
-          <h2 class="heading-lg">Trusted By Over 2,000+ Clients</h2>
-          <p>Real stories of healing, chronic pain relief, and rejuvenating spa experiences.</p>
+          <span class="subtitle-badge" data-i18n="reviews_badge">Client Testimonials</span>
+          <h2 class="heading-lg" data-i18n="reviews_title">Trusted By Over 2,000+ Clients</h2>
+          <p data-i18n="reviews_subtitle">Real stories of healing, chronic pain relief, and rejuvenating spa experiences.</p>
         </div>
 
         <div class="reviews-summary-bar">
@@ -739,9 +749,9 @@
             <div class="review-author-box">
               <div class="author-info">
                 <h4>David Chen</h4>
-                <span class="author-treatment">Deep Tissue RMT</span>
+                <span class="author-treatment" data-i18n="s1_title">Deep Tissue RMT</span>
               </div>
-              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> <span data-i18n="reviews_verified_client">Verified Client</span></span>
             </div>
           </div>
 
@@ -753,9 +763,9 @@
             <div class="review-author-box">
               <div class="author-info">
                 <h4>Elena Rostova</h4>
-                <span class="author-treatment">Japanese Head Spa</span>
+                <span class="author-treatment" data-i18n="s4_title">Japanese Head Spa</span>
               </div>
-              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> <span data-i18n="reviews_verified_client">Verified Client</span></span>
             </div>
           </div>
 
@@ -767,9 +777,9 @@
             <div class="review-author-box">
               <div class="author-info">
                 <h4>Marcus Miller</h4>
-                <span class="author-treatment">Tuina & Fire Cupping</span>
+                <span class="author-treatment" data-i18n="s3_title">Tuina & Fire Cupping</span>
               </div>
-              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> <span data-i18n="reviews_verified_client">Verified Client</span></span>
             </div>
           </div>
         </div>
@@ -780,58 +790,58 @@
     <section class="faq-section fade-in-section" id="faq">
       <div class="container">
         <div class="section-header">
-          <span class="subtitle-badge">Frequently Asked Questions</span>
-          <h2 class="heading-lg">Everything You Need To Know</h2>
-          <p>Have questions about treatments, insurance billing, or scheduling? Here are quick answers.</p>
+          <span class="subtitle-badge" data-i18n="faq_badge">Frequently Asked Questions</span>
+          <h2 class="heading-lg" data-i18n="faq_title">Everything You Need To Know</h2>
+          <p data-i18n="faq_subtitle">Have questions about treatments, insurance billing, or scheduling? Here are quick answers.</p>
         </div>
 
         <div class="faq-container">
           <div class="faq-item active">
             <div class="faq-header">
-              <span class="faq-question">How does Direct Insurance Billing work at BEST LIFE 和熙元?</span>
+              <span class="faq-question" data-i18n="faq_q1">How does Direct Insurance Billing work at BEST LIFE 和熙元?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
-            <div class="faq-body">
+            <div class="faq-body" data-i18n="faq_a1">
               Simply bring your insurance policy card or member number and government photo ID to your appointment. At checkout, we submit your claim electronically via Telus Health or eClaims. If your plan covers 100%, you pay $0 out of pocket. If there is a co-pay, you only pay the remainder.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-header">
-              <span class="faq-question">What is the difference between RMT Swedish Massage and Chinese Tuina?</span>
+              <span class="faq-question" data-i18n="faq_q2">What is the difference between RMT Swedish Massage and Chinese Tuina?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
-            <div class="faq-body">
+            <div class="faq-body" data-i18n="faq_a2">
               Swedish Massage focuses on anatomical muscles, tendons, and circulation using long gliding strokes and kneading with oil. Chinese Tuina (推拿) focuses on traditional meridian channels, acupressure points, and joint mobilizing techniques to stimulate Qi flow and relieve deep internal blockages. Both can be performed by our licensed RMTs.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-header">
-              <span class="faq-question">How do I book or reschedule via Acuity Scheduling?</span>
+              <span class="faq-question" data-i18n="faq_q3">How do I book or reschedule via Acuity Scheduling?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
-            <div class="faq-body">
+            <div class="faq-body" data-i18n="faq_a3">
               Click any 'Book Now' button on this website to open our Acuity booking portal. You can select your service, practitioner, and time slot. When you book, you receive an instant confirmation email containing a direct link to change or reschedule your appointment up to 24 hours in advance.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-header">
-              <span class="faq-question">Do I need a doctor's referral for massage therapy?</span>
+              <span class="faq-question" data-i18n="faq_q4">Do I need a doctor's referral for massage therapy?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
-            <div class="faq-body">
+            <div class="faq-body" data-i18n="faq_a4">
               You do not need a prescription or referral to receive treatment at our clinic. However, a few specific private insurance policies require a doctor's note for reimbursement. We recommend checking your insurance benefits booklet prior to your visit.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-header">
-              <span class="faq-question">What is your cancellation and arrival policy?</span>
+              <span class="faq-question" data-i18n="faq_q5">What is your cancellation and arrival policy?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
-            <div class="faq-body">
+            <div class="faq-body" data-i18n="faq_a5">
               We kindly ask for at least 24 hours' notice for cancellations or rescheduling so we may accommodate other clients on our waitlist. We recommend arriving 5–10 minutes before your scheduled start time to relax and complete your confidential health intake form.
             </div>
           </div>
@@ -847,17 +857,17 @@
           <!-- Clinic Info Card -->
           <div class="clinic-info-card">
             <div>
-              <span class="subtitle-badge">Visit Our Clinic</span>
-              <h2 class="heading-md">Location & Hours</h2>
+              <span class="subtitle-badge" data-i18n="contact_badge">Visit Our Clinic</span>
+              <h2 class="heading-md" data-i18n="contact_title">Location & Hours</h2>
 
               <div class="contact-details-list">
                 <div class="contact-detail-item">
                   <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
                   <div class="contact-detail-content">
-                    <h4>Address</h4>
-                    <p>403 Dundas St. West<br>Toronto, ON M5T 1G6</p>
+                    <h4 data-i18n="contact_addr_title">Address</h4>
+                    <p data-i18n="contact_addr_val">530 Yonge St, Unit 2<br>Toronto, ON M4Y 1X9</p>
                     <p style="font-size:0.78rem; margin-top:0.35rem; color:var(--primary);">
-                      <i class="fa-solid fa-square-parking"></i> Street parking & Green P lot nearby
+                      <i class="fa-solid fa-square-parking"></i> <span data-i18n="contact_parking_tip">Street parking & Green P lot nearby</span>
                     </p>
                   </div>
                 </div>
@@ -865,15 +875,15 @@
                 <div class="contact-detail-item">
                   <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
                   <div class="contact-detail-content">
-                    <h4>Direct Phone</h4>
-                    <p><a href="tel:14169398888">(416) 939-8888</a></p>
+                    <h4 data-i18n="contact_phone_title">Direct Phone</h4>
+                    <p><a href="tel:14168789887">(416) 878-9887</a></p>
                   </div>
                 </div>
 
                 <div class="contact-detail-item">
                   <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
                   <div class="contact-detail-content">
-                    <h4>Email Inquiries</h4>
+                    <h4 data-i18n="contact_email_title">Email Inquiries</h4>
                     <p><a href="mailto:info@bestlifemassage.com">info@bestlifemassage.com</a></p>
                   </div>
                 </div>
@@ -882,26 +892,26 @@
 
             <!-- Hours Table -->
             <div class="hours-table">
-              <h4 style="font-family:var(--font-display); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.85rem; color:var(--text-main);">Clinic Operating Hours</h4>
+              <h4 style="font-family:var(--font-display); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.85rem; color:var(--text-main);" data-i18n="contact_hours_title">Clinic Operating Hours</h4>
               <div class="hours-row highlight">
-                <span>Monday – Friday</span>
+                <span data-i18n="hours_mf">Monday – Friday</span>
                 <span>10:00 AM – 9:00 PM</span>
               </div>
               <div class="hours-row highlight">
-                <span>Saturday – Sunday</span>
+                <span data-i18n="hours_ss">Saturday – Sunday</span>
                 <span>10:00 AM – 8:00 PM</span>
               </div>
               <div class="hours-row">
-                <span>Statutory Holidays</span>
-                <span>Open by Appointment</span>
+                <span data-i18n="hours_holidays">Statutory Holidays</span>
+                <span data-i18n="hours_holidays_val">Open by Appointment</span>
               </div>
             </div>
           </div>
 
           <!-- Netlify Compatible Contact Form -->
           <div class="contact-form-card">
-            <h3>Send an Inquiry</h3>
-            <p>Have questions about a specific health condition or group booking? Drop us a message.</p>
+            <h3 data-i18n="contact_form_title">Send an Inquiry</h3>
+            <p data-i18n="contact_form_subtitle">Have questions about a specific health condition or group booking? Drop us a message.</p>
 
             <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="clinicContactForm">
               <!-- Netlify Honeypot Anti-Spam Field -->
@@ -912,22 +922,22 @@
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Full Name *</label>
-                  <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Eleanor Vance" required>
+                  <label for="name" data-i18n="form_name_label">Full Name *</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Eleanor Vance" data-i18n-ph="form_name_ph" required>
                 </div>
                 <div class="form-group">
-                  <label for="phone">Phone Number *</label>
-                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="(416) 000-0000" required>
+                  <label for="phone" data-i18n="form_phone_label">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="(416) 878-9887" data-i18n-ph="form_phone_ph" required>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="eleanor@example.com" required>
+                <label for="email" data-i18n="form_email_label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="eleanor@example.com" data-i18n-ph="form_email_ph" required>
               </div>
 
               <div class="form-group">
-                <label for="treatment-select">Desired Service</label>
+                <label for="treatment-select" data-i18n="form_service_label">Desired Service</label>
                 <select id="treatment-select" name="treatment" class="form-select">
                   <option value="Registered RMT Massage">Registered RMT Massage</option>
                   <option value="Traditional Tuina Acupressure">Traditional Tuina Acupressure</option>
@@ -939,11 +949,11 @@
               </div>
 
               <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about any symptoms, pain areas, or preferred appointment times..."></textarea>
+                <label for="message" data-i18n="form_message_label">Your Message</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about any symptoms, pain areas, or preferred appointment times..." data-i18n-ph="form_message_ph"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block btn-lg">
+              <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="form_btn_send">
                 Send Message
               </button>
             </form>
@@ -968,48 +978,48 @@
               <span class="site-logo-kanji">和 熙 元</span>
             </div>
           </div>
-          <p>
+          <p data-i18n="footer_desc">
             Toronto's premier sanctuary for Registered Massage Therapy (RMT), Chinese meridian Tuina, and holistic restorative care. Direct billing to major insurance providers.
           </p>
           <div class="announcement-item" style="color:var(--dark-muted);">
             <i class="fa-solid fa-location-pin" style="color:var(--primary);"></i>
-            <span>403 Dundas St. West, Toronto, ON</span>
+            <span data-i18n="announcement_address">530 Yonge St, Unit 2, Toronto, ON</span>
           </div>
         </div>
 
         <!-- Col 2: Treatments -->
         <div class="footer-col">
-          <h4>Treatments</h4>
+          <h4 data-i18n="footer_col_treatments">Treatments</h4>
           <ul class="footer-links">
-            <li><a href="#services" class="js-book-trigger" data-service="Deep Tissue RMT">Deep Tissue RMT</a></li>
-            <li><a href="#services" class="js-book-trigger" data-service="Traditional Tuina">Traditional Tuina</a></li>
-            <li><a href="#services" class="js-book-trigger" data-service="Fire Cupping">Fire Cupping & Gua Sha</a></li>
-            <li><a href="#services" class="js-book-trigger" data-service="Japanese Head Spa">Japanese Head Spa</a></li>
-            <li><a href="#services" class="js-book-trigger" data-service="Hot Stone Therapy">Hot Stone Therapy</a></li>
-            <li><a href="#services" class="js-book-trigger" data-service="Prenatal Massage">Prenatal Care</a></li>
+            <li><a href="#services" class="js-book-trigger" data-service="Deep Tissue RMT" data-i18n="s1_title">Deep Tissue RMT</a></li>
+            <li><a href="#services" class="js-book-trigger" data-service="Traditional Tuina" data-i18n="s2_title">Traditional Tuina</a></li>
+            <li><a href="#services" class="js-book-trigger" data-service="Fire Cupping" data-i18n="s3_title">Fire Cupping & Gua Sha</a></li>
+            <li><a href="#services" class="js-book-trigger" data-service="Japanese Head Spa" data-i18n="s4_title">Japanese Head Spa</a></li>
+            <li><a href="#services" class="js-book-trigger" data-service="Hot Stone Therapy" data-i18n="s5_title">Hot Stone Therapy</a></li>
+            <li><a href="#services" class="js-book-trigger" data-service="Prenatal Massage" data-i18n="s6_title">Prenatal Care</a></li>
           </ul>
         </div>
 
         <!-- Col 3: Quick Links -->
         <div class="footer-col">
-          <h4>Information</h4>
+          <h4 data-i18n="footer_col_info">Information</h4>
           <ul class="footer-links">
-            <li><a href="#direct-billing">Direct Insurance Billing</a></li>
-            <li><a href="#pricing">Price Menu & Rates</a></li>
-            <li><a href="#about">Philosophy of 和熙元</a></li>
-            <li><a href="#reviews">Patient Testimonials</a></li>
+            <li><a href="#direct-billing" data-i18n="nav_billing">Direct Insurance Billing</a></li>
+            <li><a href="#pricing" data-i18n="nav_pricing">Price Menu & Rates</a></li>
+            <li><a href="#about" data-i18n="nav_philosophy">Philosophy of 和熙元</a></li>
+            <li><a href="#reviews" data-i18n="nav_reviews">Patient Testimonials</a></li>
             <li><a href="#faq">FAQ & Clinic Policies</a></li>
-            <li><a href="#contact">Location & Hours</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Location & Hours</a></li>
           </ul>
         </div>
 
         <!-- Col 4: Acuity Quick Box -->
         <div class="footer-col">
-          <h4>Online Booking</h4>
+          <h4 data-i18n="footer_col_booking">Online Booking</h4>
           <div class="footer-acuity-box">
-            <h5>Schedule with Acuity</h5>
-            <p>Select your favorite therapist, duration, and instant confirmation 24/7.</p>
-            <button class="btn btn-primary btn-sm btn-block js-book-trigger" data-service="Footer Booking">
+            <h5 data-i18n="footer_booking_title">Schedule with Acuity</h5>
+            <p data-i18n="footer_booking_desc">Select your favorite therapist, duration, and instant confirmation 24/7.</p>
+            <button class="btn btn-primary btn-sm btn-block js-book-trigger" data-service="Footer Booking" data-i18n="btn_book_appointment">
               Book Appointment
             </button>
           </div>
@@ -1019,7 +1029,7 @@
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>&copy; <span id="currentYear">2026</span> BEST LIFE 和熙元 Massage Therapy Clinic. All Rights Reserved.</p>
+        <p>&copy; <span id="currentYear">2026</span> BEST LIFE 和熙元 Massage Therapy Clinic. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
         <div class="footer-legal-links">
           <a href="#home">Privacy Policy</a>
           <span>•</span>
@@ -1057,6 +1067,7 @@
 
   <!-- Scripts -->
   <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();

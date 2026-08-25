@@ -10,15 +10,15 @@
 const SITE_CONFIG = {
   businessName: "BEST LIFE 和熙元",
   tagline: "Registered Massage Therapy & Eastern Holistic Healing",
-  phone: "(416) 939-8888",
-  phoneRaw: "14169398888",
+  phone: "(416) 878-9887",
+  phoneRaw: "14168789887",
   email: "info@bestlifemassage.com",
   address: {
-    street: "403 Dundas St. West",
+    street: "530 Yonge St, Unit 2",
     city: "Toronto",
     province: "ON",
-    postalCode: "M5T 1G6",
-    landmark: "Downtown Toronto (Near Spadina & University)"
+    postalCode: "M4Y 1X9",
+    landmark: "Downtown Toronto (Yonge & Wellesley)"
   },
   hours: [
     { days: "Monday - Friday", time: "10:00 AM – 9:00 PM" },
@@ -34,7 +34,7 @@ const SITE_CONFIG = {
   social: {
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",
-    googleMaps: "https://maps.google.com/?q=403+Dundas+St+West+Toronto+ON"
+    googleMaps: "https://maps.google.com/?q=530+Yonge+St+Unit+2+Toronto+ON"
   },
   insuranceProviders: [
     "Sun Life Financial",
