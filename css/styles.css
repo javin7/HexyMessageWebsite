@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   Site Header & Navigation (Airy & Clean)
+   Site Header & Navigation (Airy & Clean - Full Width Alignment)
    -------------------------------------------------------------------------- */
 .site-header {
   position: sticky;
@@ -330,6 +330,13 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color var(--transition-fast);
 }
 
+.site-header .container,
+.announcement-bar .container {
+  max-width: 100%;
+  padding-left: clamp(1.5rem, 3.5vw, 3.5rem);
+  padding-right: clamp(1.5rem, 3.5vw, 3.5rem);
+}
+
 .site-header.is-scrolled {
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -340,16 +347,18 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
+  width: 100%;
 }
 
 .site-logo {
   display: flex;
   align-items: center;
   gap: 0.85rem;
+  flex-shrink: 0;
 }
 
 .site-logo-img {
-  height: 44px;
+  height: 46px;
   width: auto;
   object-fit: contain;
   mix-blend-mode: multiply;
@@ -377,11 +386,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-/* Main Navigation */
+/* Main Navigation (Centered in the header) */
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .nav-links {
@@ -390,6 +400,15 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   gap: 2.2rem;
 }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
 
 .nav-link {
   font-family: var(--font-body);
@@ -421,12 +440,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 .mobile-toggle {
   display: none;
   background: none;
@@ -435,6 +448,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   color: var(--text-main);
 }
+
 
 /* --------------------------------------------------------------------------
    Hero Section (Airy, Minimalist Editorial)
@@ -1871,14 +1885,6 @@ h1, h2, h3, h4, h5, h6 {
   .provider-tags-grid {
     grid-template-columns: 1fr;
   }
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  .announcement-inner {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.35rem;
-  }
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -1886,3 +1892,47 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Scroll-Triggered Fade-In Animations
+   -------------------------------------------------------------------------- */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Card Children */
+.fade-in-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-stagger.is-visible > *:nth-child(1) { transition-delay: 0.05s; }
+.fade-in-stagger.is-visible > *:nth-child(2) { transition-delay: 0.15s; }
+.fade-in-stagger.is-visible > *:nth-child(3) { transition-delay: 0.25s; }
+.fade-in-stagger.is-visible > *:nth-child(4) { transition-delay: 0.35s; }
+.fade-in-stagger.is-visible > *:nth-child(5) { transition-delay: 0.45s; }
+.fade-in-stagger.is-visible > *:nth-child(6) { transition-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-section, .fade-in-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+

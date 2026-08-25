@@ -202,11 +202,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Quick Acuity Embed button hook
-  const embedBookDirectBtn = document.getElementById('embedBookDirectBtn');
-  if (embedBookDirectBtn) {
-    embedBookDirectBtn.addEventListener('click', () => {
-      openAcuityModal('General Consultation & Treatment');
+  // 9. Scroll-Triggered Fade-In Observer
+  const fadeElements = document.querySelectorAll('.fade-in-section, .fade-in-stagger');
+  
+  if ('IntersectionObserver' in window) {
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -40px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    fadeElements.forEach(el => {
+      appearOnScroll.observe(el);
     });
+  } else {
+    fadeElements.forEach(el => el.classList.add('is-visible'));
   }
 });
+
