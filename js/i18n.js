@@ -6,7 +6,7 @@
 const TRANSLATIONS = {
   en: {
     // Header & Announcement
-    "announcement_address": "530 Yonge St, Unit 2, Toronto, ON",
+    "announcement_address": "530 Yonge St, Unit 2<span class=\"hide-on-mobile\">, Toronto, ON</span>",
     "announcement_billing": "Direct Insurance Billing Available",
     "announcement_booking": "Acuity Online Booking",
     "nav_treatments": "Treatments",
@@ -238,7 +238,7 @@ const TRANSLATIONS = {
 
   zh: {
     // Header & Announcement
-    "announcement_address": "多伦多市中心 530 Yonge St, Unit 2",
+    "announcement_address": "530 Yonge St, Unit 2",
     "announcement_billing": "支持各大保险公司直接结算 (Direct Billing)",
     "announcement_booking": "Acuity 实时在线预约系统",
     "nav_treatments": "疗程服务",
