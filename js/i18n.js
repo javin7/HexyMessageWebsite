@@ -232,7 +232,8 @@ const TRANSLATIONS = {
     "footer_col_booking": "Online Booking",
     "footer_booking_title": "Schedule with Acuity",
     "footer_booking_desc": "Select your favorite therapist, duration, and instant confirmation 24/7.",
-    "footer_rights": "All Rights Reserved."
+    "footer_rights": "All Rights Reserved.",
+    "mobile_call": "Call Clinic"
   },
 
   zh: {
@@ -463,7 +464,8 @@ const TRANSLATIONS = {
     "footer_col_booking": "在线预约",
     "footer_booking_title": "Acuity 实时系统",
     "footer_booking_desc": "24/7 全天候在线选择推拿师、调理时长并即时确认。",
-    "footer_rights": "版权所有 盗用必究"
+    "footer_rights": "版权所有 盗用必究",
+    "mobile_call": "拨打热线"
   }
 };
 
