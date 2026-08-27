@@ -21,8 +21,8 @@ const SITE_CONFIG = {
     landmark: "Downtown Toronto (Yonge & Wellesley)"
   },
   hours: [
-    { days: "Monday - Friday", time: "10:00 AM – 9:00 PM" },
-    { days: "Saturday - Sunday", time: "10:00 AM – 8:00 PM" },
+    { days: "Weekdays (Mon – Fri)", time: "10:00 AM – 9:00 PM" },
+    { days: "Weekends (Sat – Sun)", time: "9:00 AM – 9:00 PM" },
     { days: "Holidays", time: "Open by Appointment" }
   ],
   // Acuity Scheduling URL (Replace with your actual link when ready)
