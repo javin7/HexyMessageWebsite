@@ -13,7 +13,6 @@ const TRANSLATIONS = {
     "nav_billing": "Direct Billing",
     "nav_pricing": "Services & Rates",
     "nav_philosophy": "Philosophy",
-    "nav_reviews": "Reviews",
     "nav_contact": "Contact",
     "btn_book_appointment": "Book Appointment",
     "lang_toggle_text": "中文",
@@ -31,7 +30,6 @@ const TRANSLATIONS = {
     "hero_feature_2_desc": "All major Canadian providers.",
     "hero_feature_3_title": "7 Days a Week",
     "hero_feature_3_desc": "530 Yonge St, Unit 2.",
-    "hero_rating_badge": "2,100+ Client Reviews",
 
     // Services Section
     "services_badge": "Curated Clinical Services",
@@ -314,12 +312,6 @@ const TRANSLATIONS = {
     "about_point2_desc": "Certified clinicians adhering to highest professional standards.",
     "about_seal_meaning": "Harmony • Radiance • Vitality",
 
-    // Reviews
-    "reviews_badge": "Client Reviews",
-    "reviews_title": "Trusted By 2,000+ Clients",
-    "reviews_subtitle": "Real stories of pain relief and rejuvenating care.",
-    "reviews_verified_client": "Verified Client",
-
     // FAQ
     "faq_badge": "FAQ",
     "faq_title": "Frequently Asked Questions",
@@ -378,7 +370,6 @@ const TRANSLATIONS = {
     "nav_billing": "保险直赔",
     "nav_pricing": "项目价目表",
     "nav_philosophy": "和熙元理念",
-    "nav_reviews": "客户评价",
     "nav_contact": "联系我们",
     "btn_book_appointment": "立即预约",
     "lang_toggle_text": "EN",
@@ -396,7 +387,6 @@ const TRANSLATIONS = {
     "hero_feature_2_desc": "支持加拿大各大主流商业医疗保险",
     "hero_feature_3_title": "每周 7 天营业",
     "hero_feature_3_desc": "530 Yonge St, Unit 2",
-    "hero_rating_badge": "2,100+ 位客户好评",
 
     // Services Section
     "services_badge": "专业疗程体系",
@@ -678,12 +668,6 @@ const TRANSLATIONS = {
     "about_point2_title": "注册持牌保障",
     "about_point2_desc": "持牌技师严格遵循安省专业标准。",
     "about_seal_meaning": "调和 • 熙盛 • 元气",
-
-    // Reviews
-    "reviews_badge": "客户评价",
-    "reviews_title": "深受 2,000+ 位客人信赖",
-    "reviews_subtitle": "来自多伦多本地客人的真实调理体验与反馈。",
-    "reviews_verified_client": "已认证客户",
 
     // FAQ
     "faq_badge": "常见问题",
