@@ -1,15 +1,15 @@
 /**
- * BEST LIFE 和熙元 - Massage Therapy & Holistic Wellness Clinic
+ * HEXY Wellness Clinic 和熙元 - Professional Therapy & Traditional Chinese Medicine
  * Central Configuration
  * 
  * To connect your live Acuity Scheduling account:
  * Simply replace 'acuityUrl' with your actual Acuity Scheduling URL or owner ID.
- * Example: 'https://bestlifemassage.as.me/' or 'https://app.acuityscheduling.com/schedule.php?owner=12345678'
+ * Example: 'https://bestlifemassage.as.me/' or 'https://app.acuityscheduling.com/schedule.php?owner=24589132'
  */
 
 const SITE_CONFIG = {
-  businessName: "BEST LIFE 和熙元",
-  tagline: "Registered Massage Therapy & Eastern Holistic Healing",
+  businessName: "HEXY Wellness Clinic 和熙元",
+  tagline: "Professional Therapy & Traditional Chinese Medicine",
   phone: "(416) 878-9887",
   phoneRaw: "14168789887",
   email: "info@bestlifemassage.com",

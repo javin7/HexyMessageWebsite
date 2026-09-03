@@ -79,6 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 4b. Pricing Section Category Tab Switcher
+  const pricingCatBtns = document.querySelectorAll('.pricing-cat-btn');
+  const pricingPanels = document.querySelectorAll('.pricing-panel');
+
+  pricingCatBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pricingCatBtns.forEach(b => b.classList.remove('active'));
+      pricingPanels.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetCat = btn.getAttribute('data-pricing-target');
+      const targetPanel = document.getElementById(targetCat);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+    });
+  });
+
   // 5. FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
