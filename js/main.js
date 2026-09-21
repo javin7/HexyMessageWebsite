@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     businessName: "BEST LIFE 和熙元",
     phone: "(416) 939-8888",
     acuity: {
-      schedulingUrl: "https://app.acuityscheduling.com/schedule.php?owner=24589132",
-      directBookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=24589132"
+      schedulingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853",
+      directBookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853"
     }
   };
 

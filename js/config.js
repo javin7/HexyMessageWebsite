@@ -3,8 +3,8 @@
  * Central Configuration
  * 
  * To connect your live Acuity Scheduling account:
- * Simply replace 'acuityUrl' with your actual Acuity Scheduling URL or owner ID.
- * Example: 'https://bestlifemassage.as.me/' or 'https://app.acuityscheduling.com/schedule.php?owner=24589132'
+ * Set acuity.schedulingUrl and acuity.directBookingUrl to your full scheduling URL.
+ * Example: 'https://bestlifemassage.as.me/' or 'https://app.acuityscheduling.com/schedule.php?owner=40451853'
  */
 
 const SITE_CONFIG = {
@@ -25,10 +25,10 @@ const SITE_CONFIG = {
     { days: "Weekends (Sat – Sun)", time: "9:00 AM – 9:00 PM" },
     { days: "Holidays", time: "Open by Appointment" }
   ],
-  // Acuity Scheduling URL (Replace with your actual link when ready)
+  // Acuity Scheduling URLs
   acuity: {
-    schedulingUrl: "https://app.acuityscheduling.com/schedule.php?owner=24589132",
-    directBookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=24589132",
+    schedulingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853",
+    directBookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853",
     embeddedType: "iframe"
   },
   social: {
