@@ -52,7 +52,7 @@ const TRANSLATIONS = {
     "s1_b1": "Full insurance receipt provided",
     "s1_b2": "Combines Swedish, deep tissue & trigger point",
     "s1_price_label": "From",
-    "s1_price": "$95 / 30m",
+    "s1_price": "$95 / 30 min",
 
     "s2_badge": "Warming Therapy",
     "s2_tag": "Combination",
@@ -63,7 +63,7 @@ const TRANSLATIONS = {
     "s2_b1": "Targeted herbal heat penetration",
     "s2_b2": "Optional moxa/cupping combination",
     "s2_price_label": "From",
-    "s2_price": "$150 / 45m",
+    "s2_price": "$150 / 45 min",
 
     "s3_badge": "TCM Meridian",
     "s3_tag": "Holistic Care",
@@ -74,7 +74,7 @@ const TRANSLATIONS = {
     "s3_b1": "Precise meridian acupoint stimulation",
     "s3_b2": "Available with moxibustion or cupping combo",
     "s3_price_label": "From",
-    "s3_price": "$95 / 30m",
+    "s3_price": "$95 / 30 min",
 
     "s4_badge": "Ancient Wisdom",
     "s4_tag": "Decompression",
@@ -85,7 +85,7 @@ const TRANSLATIONS = {
     "s4_b1": "Dispels deep chill and muscle stiffness",
     "s4_b2": "Supports micro-circulation & detoxification",
     "s4_price_label": "From",
-    "s4_price": "$95 / 30m",
+    "s4_price": "$95 / 30 min",
 
     "s5_badge": "Structural Balance",
     "s5_tag": "Manual Therapy",
@@ -96,7 +96,7 @@ const TRANSLATIONS = {
     "s5_b1": "Fascial release & joint mobilization",
     "s5_b2": "Postural and alignment optimization",
     "s5_price_label": "From",
-    "s5_price": "$100 / 30m",
+    "s5_price": "$100 / 30 min",
 
     "s6_badge": "Herbal Care",
     "s6_tag": "Wellness & Teas",
