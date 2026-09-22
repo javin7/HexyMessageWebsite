@@ -117,79 +117,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Acuity Scheduling Popup Modal System
-  const acuityModal = document.getElementById('acuityModal');
-  const modalCloseBtn = document.getElementById('modalCloseBtn');
-  const modalSelectedService = document.getElementById('modalSelectedService');
-  const modalAcuityIframe = document.getElementById('modalAcuityIframe');
-  const directAcuityLink = document.getElementById('directAcuityLink');
-
-  const durationChoices = document.getElementById('modalDurationChoices');
-  const durationButtons = document.getElementById('modalDurationButtons');
-  const bookingUrl = (appointmentType, base = config.acuity.schedulingUrl) => {
-    const url = new URL(base);
+  // 6. Open Acuity booking links in a new tab.
+  const bookingUrl = (appointmentType) => {
+    const url = new URL(config.acuity.directBookingUrl);
     if (appointmentType) url.searchParams.set('appointmentType', appointmentType);
     return url.href;
   };
 
-  const loadBooking = (appointmentType, label = '') => {
-    const url = bookingUrl(appointmentType);
-    if (modalAcuityIframe) {
-      modalAcuityIframe.hidden = false;
-      if (modalAcuityIframe.src !== url) modalAcuityIframe.src = url;
+  const makeBookingLink = (element, appointmentType) => {
+    const link = document.createElement('a');
+    for (const attribute of element.attributes) {
+      if (attribute.name !== 'type') link.setAttribute(attribute.name, attribute.value);
     }
-    if (directAcuityLink) {
-      directAcuityLink.href = bookingUrl(appointmentType, config.acuity.directBookingUrl);
-    }
-    if (modalSelectedService) {
-      modalSelectedService.textContent = label;
-      modalSelectedService.style.display = label ? 'inline-block' : 'none';
-    }
+    link.innerHTML = element.innerHTML;
+    link.href = bookingUrl(appointmentType);
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    element.replaceWith(link);
+    return link;
   };
 
-  const openAcuityModal = (serviceName = '', selectedId = '') => {
-    const service = config.acuity.serviceAliases?.[serviceName] || serviceName;
-    const appointments = config.acuity.appointmentTypes?.[service] || [];
-    const category = config.acuity.categories?.[service];
-    durationButtons?.replaceChildren();
-    if (durationChoices) durationChoices.hidden = appointments.length < 2;
-
-    appointments.forEach(appointment => {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'btn btn-outline btn-sm';
-      button.textContent = `${appointment.duration} min`;
-      button.setAttribute('aria-pressed', String(appointment.id === selectedId));
-      button.addEventListener('click', () => {
-        durationButtons.querySelectorAll('button').forEach(other => {
-          other.setAttribute('aria-pressed', String(other === button));
-        });
-        loadBooking(appointment.id, `${service} — ${appointment.duration} min`);
-      });
-      durationButtons?.appendChild(button);
-    });
-
-    const selected = appointments.find(appointment => appointment.id === selectedId)
-      || (appointments.length === 1 ? appointments[0] : null);
-    if (selected) {
-      loadBooking(selected.id, selected.duration ? `${service} — ${selected.duration} min` : service);
-    } else if (appointments.length > 1) {
-      // Wait for an explicit duration choice instead of booking an arbitrary length.
-      loadBooking(category, service);
-      if (modalAcuityIframe) {
-        modalAcuityIframe.src = 'about:blank';
-        modalAcuityIframe.hidden = true;
-      }
-    } else {
-      loadBooking(category, category ? service : '');
-    }
-
-    acuityModal?.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    if (appointments.length > 1 && !selected) durationButtons?.querySelector('button')?.focus();
-  };
-
-  // Turn configured pricing durations into direct appointment buttons.
+  // Each configured price opens its exact appointment and duration.
   document.querySelectorAll('.pricing-item-card').forEach(card => {
     const service = card.querySelector('.js-book-trigger')?.getAttribute('data-service');
     const appointments = config.acuity.appointmentTypes?.[service] || [];
@@ -197,43 +145,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const duration = parseInt(pill.querySelector('.rate-pill-dur')?.textContent, 10);
       const appointment = appointments.find(item => item.duration === duration);
       if (!appointment) return;
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'rate-pill rate-pill-booking';
-      button.innerHTML = pill.innerHTML;
-      button.setAttribute('aria-label', `${service} — ${duration} min`);
-      button.addEventListener('click', () => openAcuityModal(service, appointment.id));
-      pill.replaceWith(button);
+      const link = makeBookingLink(pill, appointment.id);
+      link.classList.add('rate-pill-booking');
+      link.setAttribute('aria-label', `${service} — ${duration} min`);
     });
   });
 
-  const closeAcuityModal = () => {
-    acuityModal?.classList.remove('active');
-    document.body.style.overflow = '';
-  };
-
-  modalCloseBtn?.addEventListener('click', closeAcuityModal);
-  acuityModal?.addEventListener('click', (e) => {
-    if (e.target === acuityModal) {
-      closeAcuityModal();
-    }
-  });
-
-  // Escape key closes modal
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && acuityModal?.classList.contains('active')) {
-      closeAcuityModal();
-    }
-  });
-
-  // Attach Acuity trigger to all booking buttons
-  const bookingTriggers = document.querySelectorAll('.js-book-trigger');
-  bookingTriggers.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const service = btn.getAttribute('data-service') || '';
-      openAcuityModal(service);
-    });
+  document.querySelectorAll('.js-book-trigger').forEach(button => {
+    const name = button.getAttribute('data-service') || '';
+    const service = config.acuity.serviceAliases?.[name] || name;
+    const appointments = config.acuity.appointmentTypes?.[service] || [];
+    // Let clients choose the duration in Acuity when a service has several options.
+    const category = config.acuity.categories?.[service]
+      || (appointments.length > 1
+        ? config.acuity.categories?.[service === 'Traditional Acupuncture' ? 'Acupuncture' : 'Massage Therapy']
+        : undefined);
+    makeBookingLink(button, appointments.length === 1 ? appointments[0].id : category);
   });
 
   // 7. Toast Notification Utility
