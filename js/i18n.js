@@ -6,6 +6,8 @@
 
 const TRANSLATIONS = {
   en: {
+    "booking_choose_duration": "Choose your appointment duration:",
+    "booking_open_direct": "Open booking in a new tab",
     // Header & Announcement
     "announcement_address": "530 Yonge St, Unit 2<span class=\"hide-on-mobile\">, Toronto, ON</span>",
     "announcement_billing": "Direct Insurance Billing Available",
@@ -363,6 +365,8 @@ const TRANSLATIONS = {
   },
 
   zh: {
+    "booking_choose_duration": "请选择预约时长：",
+    "booking_open_direct": "在新标签页中打开预约",
     // Header & Announcement
     "announcement_address": "530 Yonge St, Unit 2",
     "announcement_billing": "支持各大保险公司直接结算 (Direct Billing)",

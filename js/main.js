@@ -124,28 +124,88 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalAcuityIframe = document.getElementById('modalAcuityIframe');
   const directAcuityLink = document.getElementById('directAcuityLink');
 
-  const openAcuityModal = (serviceName = '') => {
-    if (modalSelectedService) {
-      if (serviceName) {
-        modalSelectedService.textContent = `Selected: ${serviceName}`;
-        modalSelectedService.style.display = 'inline-block';
-      } else {
-        modalSelectedService.style.display = 'none';
-      }
-    }
+  const durationChoices = document.getElementById('modalDurationChoices');
+  const durationButtons = document.getElementById('modalDurationButtons');
+  const bookingUrl = (appointmentType, base = config.acuity.schedulingUrl) => {
+    const url = new URL(base);
+    if (appointmentType) url.searchParams.set('appointmentType', appointmentType);
+    return url.href;
+  };
 
-    // Set iframe source if needed
-    if (modalAcuityIframe && (!modalAcuityIframe.src || modalAcuityIframe.src === 'about:blank')) {
-      modalAcuityIframe.src = config.acuity.schedulingUrl;
+  const loadBooking = (appointmentType, label = '') => {
+    const url = bookingUrl(appointmentType);
+    if (modalAcuityIframe) {
+      modalAcuityIframe.hidden = false;
+      if (modalAcuityIframe.src !== url) modalAcuityIframe.src = url;
     }
-
     if (directAcuityLink) {
-      directAcuityLink.href = config.acuity.directBookingUrl;
+      directAcuityLink.href = bookingUrl(appointmentType, config.acuity.directBookingUrl);
+    }
+    if (modalSelectedService) {
+      modalSelectedService.textContent = label;
+      modalSelectedService.style.display = label ? 'inline-block' : 'none';
+    }
+  };
+
+  const openAcuityModal = (serviceName = '', selectedId = '') => {
+    const service = config.acuity.serviceAliases?.[serviceName] || serviceName;
+    const appointments = config.acuity.appointmentTypes?.[service] || [];
+    const category = config.acuity.categories?.[service];
+    durationButtons?.replaceChildren();
+    if (durationChoices) durationChoices.hidden = appointments.length < 2;
+
+    appointments.forEach(appointment => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'btn btn-outline btn-sm';
+      button.textContent = `${appointment.duration} min`;
+      button.setAttribute('aria-pressed', String(appointment.id === selectedId));
+      button.addEventListener('click', () => {
+        durationButtons.querySelectorAll('button').forEach(other => {
+          other.setAttribute('aria-pressed', String(other === button));
+        });
+        loadBooking(appointment.id, `${service} — ${appointment.duration} min`);
+      });
+      durationButtons?.appendChild(button);
+    });
+
+    const selected = appointments.find(appointment => appointment.id === selectedId)
+      || (appointments.length === 1 ? appointments[0] : null);
+    if (selected) {
+      loadBooking(selected.id, selected.duration ? `${service} — ${selected.duration} min` : service);
+    } else if (appointments.length > 1) {
+      // Wait for an explicit duration choice instead of booking an arbitrary length.
+      loadBooking(category, service);
+      if (modalAcuityIframe) {
+        modalAcuityIframe.src = 'about:blank';
+        modalAcuityIframe.hidden = true;
+      }
+    } else {
+      loadBooking(category, category ? service : '');
     }
 
     acuityModal?.classList.add('active');
     document.body.style.overflow = 'hidden';
+    if (appointments.length > 1 && !selected) durationButtons?.querySelector('button')?.focus();
   };
+
+  // Turn configured pricing durations into direct appointment buttons.
+  document.querySelectorAll('.pricing-item-card').forEach(card => {
+    const service = card.querySelector('.js-book-trigger')?.getAttribute('data-service');
+    const appointments = config.acuity.appointmentTypes?.[service] || [];
+    card.querySelectorAll('.rate-pill').forEach(pill => {
+      const duration = parseInt(pill.querySelector('.rate-pill-dur')?.textContent, 10);
+      const appointment = appointments.find(item => item.duration === duration);
+      if (!appointment) return;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'rate-pill rate-pill-booking';
+      button.innerHTML = pill.innerHTML;
+      button.setAttribute('aria-label', `${service} — ${duration} min`);
+      button.addEventListener('click', () => openAcuityModal(service, appointment.id));
+      pill.replaceWith(button);
+    });
+  });
 
   const closeAcuityModal = () => {
     acuityModal?.classList.remove('active');

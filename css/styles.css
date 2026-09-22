@@ -2588,3 +2588,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
+/* Service-specific appointment selection. */
+.modal-duration-choices { padding: 1rem 1.5rem; }
+.modal-duration-choices[hidden] { display: none; }
+.modal-duration-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.modal-duration-buttons [aria-pressed="true"] { background: var(--primary); color: #fff; }
+.modal-booking-link { padding: 0.5rem 1.5rem; font-size: 0.875rem; }
+.rate-pill-booking { cursor: pointer; font: inherit; }
+.rate-pill-booking:hover, .rate-pill-booking:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }

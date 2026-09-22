@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Master Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=acuity-services-20260922">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -1402,6 +1402,13 @@
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
+      <div id="modalDurationChoices" class="modal-duration-choices" hidden>
+        <p data-i18n="booking_choose_duration">Choose your appointment duration:</p>
+        <div id="modalDurationButtons" class="modal-duration-buttons"></div>
+      </div>
+      <div class="modal-booking-link">
+        <a id="directAcuityLink" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-i18n="booking_open_direct">Open booking in a new tab</a>
+      </div>
       <div class="modal-body">
         <iframe id="modalAcuityIframe" src="about:blank" title="Acuity Online Scheduling Modal Frame"></iframe>
       </div>
@@ -1415,9 +1422,9 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/config.js?v=acuity-40451853"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js?v=acuity-40451853"></script>
+  <script src="js/config.js?v=acuity-services-20260922"></script>
+  <script src="js/i18n.js?v=acuity-services-20260922"></script>
+  <script src="js/main.js?v=acuity-services-20260922"></script>
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
