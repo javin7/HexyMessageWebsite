@@ -12,7 +12,7 @@ const SITE_CONFIG = {
   tagline: "Professional Therapy & Traditional Chinese Medicine",
   phone: "(416) 878-9887",
   phoneRaw: "14168789887",
-  email: "info@bestlifemassage.com",
+  email: "lifegotbetter@evergreenheath.com",
   address: {
     street: "530 Yonge St, Unit 2",
     city: "Toronto",
