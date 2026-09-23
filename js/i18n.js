@@ -339,7 +339,7 @@ const TRANSLATIONS = {
     "hours_holidays": "Holidays",
     "hours_holidays_val": "By Appointment",
     "contact_form_title": "Send an Inquiry",
-    "contact_form_subtitle": "Have a question or custom wellness request? Send us a message.",
+    "contact_form_subtitle": "Complete this form to open an email draft. Send it from your email app, or email info@bestlifemassage.com directly.",
     "form_name_label": "Full Name *",
     "form_name_ph": "e.g. Eleanor Vance",
     "form_phone_label": "Phone Number *",
@@ -349,7 +349,7 @@ const TRANSLATIONS = {
     "form_service_label": "Desired Service",
     "form_message_label": "Your Message",
     "form_message_ph": "Tell us about any symptoms or appointment questions...",
-    "form_btn_send": "Send Message",
+    "form_btn_send": "Open Email Draft",
 
     // Footer
     "footer_desc": "Toronto professional clinic combining Registered Massage Therapy (RMT), Acupuncture, Moxibustion, Cupping, Osteopathy, and Traditional Chinese Medicine. Direct billing available.",
@@ -696,7 +696,7 @@ const TRANSLATIONS = {
     "hours_holidays": "法定节假日",
     "hours_holidays_val": "接受提前预约",
     "contact_form_title": "留言咨询",
-    "contact_form_subtitle": "有身体疑问或调理需求？欢迎随时给我们留言。",
+    "contact_form_subtitle": "填写表单后将打开邮件草稿，请在邮件应用中发送，或直接发邮件至 info@bestlifemassage.com。",
     "form_name_label": "姓名 *",
     "form_name_ph": "张先生 / 李女士",
     "form_phone_label": "电话 *",
@@ -706,7 +706,7 @@ const TRANSLATIONS = {
     "form_service_label": "咨询项目",
     "form_message_label": "留言内容",
     "form_message_ph": "请描述您的身体状况或就诊疑问...",
-    "form_btn_send": "提交留言",
+    "form_btn_send": "打开邮件草稿",
 
     // Footer
     "footer_desc": "多伦多市中心专业注册按摩 (RMT)、针灸、艾灸拔罐、正骨及传统中医综合调理门诊。支持各大商业保险现场直赔。",

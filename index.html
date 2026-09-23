@@ -100,7 +100,6 @@
       <!-- Desktop Navigation -->
       <nav class="main-nav" aria-label="Primary Navigation">
         <ul class="nav-links">
-          <li><a href="#services" class="nav-link" data-i18n="nav_treatments">Treatments</a></li>
           <li><a href="#direct-billing" class="nav-link" data-i18n="nav_billing">Direct Billing</a></li>
           <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Services & Rates</a></li>
           <li><a href="#about" class="nav-link" data-i18n="nav_philosophy">Philosophy</a></li>
@@ -137,8 +136,6 @@
       </button>
     </div>
     <ul class="mobile-nav-links">
-      <li><a href="#services" class="mobile-nav-link" data-i18n="nav_treatments">Treatments</a></li>
-      <li><a href="#booking" class="mobile-nav-link" data-i18n="nav_booking">Booking</a></li>
       <li><a href="#direct-billing" class="mobile-nav-link" data-i18n="nav_billing">Direct Billing</a></li>
       <li><a href="#pricing" class="mobile-nav-link" data-i18n="nav_pricing">Services & Rates</a></li>
       <li><a href="#about" class="mobile-nav-link" data-i18n="nav_philosophy">Philosophy</a></li>
@@ -203,218 +200,7 @@
     </section>
 
     <!-- Treatments & Services Overview Section -->
-    <section class="services-section fade-in-section" id="services">
-      <div class="container">
-        <div class="section-header">
-          <span class="subtitle-badge" data-i18n="services_badge">Curated Clinical Services</span>
-          <h2 class="heading-lg" data-i18n="services_title">Treatments & Services</h2>
-          <p data-i18n="services_subtitle">Customized care to relieve muscle tension, improve mobility, and support overall balance.</p>
-        </div>
-
-        <!-- Filter Tabs -->
-        <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Treatments</button>
-          <button class="filter-btn" data-filter="rmt" data-i18n="filter_rmt">RMT Massage</button>
-          <button class="filter-btn" data-filter="acu" data-i18n="filter_acu">Acupuncture & TCM</button>
-          <button class="filter-btn" data-filter="moxa" data-i18n="filter_moxa">Moxa & Cupping</button>
-          <button class="filter-btn" data-filter="osteo" data-i18n="filter_osteo">Osteopathy</button>
-          <button class="filter-btn" data-filter="herbal" data-i18n="filter_herbal">Herbal & Teas</button>
-        </div>
-
-        <!-- Services Grid -->
-        <div class="services-grid fade-in-stagger">
-          
-          <!-- Service 1: RMT -->
-          <article class="service-card" data-category="rmt">
-            <div class="service-image-box">
-              <img src="assets/images/service-deep-tissue.jpg" alt="Registered Massage Therapy (RMT)" width="600" height="450" loading="lazy">
-              <span class="service-badge rmt" data-i18n="s1_badge">RMT Insured</span>
-            </div>
-            <div class="service-body">
-              <div class="service-meta">
-                <span class="service-tag" data-i18n="s1_tag">Therapeutic</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s1_duration">30 / 45 / 60 / 90 / 120 Min</span></span>
-              </div>
-              <h3 class="service-title" data-i18n="s1_title">Registered Massage Therapy (RMT)</h3>
-              <p class="service-desc" data-i18n="s1_desc">
-                Professional hands-on massage therapy designed to relieve muscle tension, reduce discomfort, promote relaxation, and support overall well-being.
-              </p>
-              <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_b1">Full insurance receipt provided</span></li>
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_b2">Combines Swedish, deep tissue & trigger point</span></li>
-              </ul>
-              <div class="service-footer">
-                <div class="service-price">
-                  <span class="service-price-label" data-i18n="s1_price_label">From</span>
-                  <span class="service-price-val" data-i18n="s1_price">$95 / 30 min</span>
-                </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Registered Massage Therapy (RMT)" data-i18n="btn_book_service">
-                  Book Service
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Service 2: Energy Heat & Herbal Pack -->
-          <article class="service-card" data-category="rmt">
-            <div class="service-image-box">
-              <img src="assets/images/service-hot-stone.jpg" alt="Energy Heat & Herbal Pack Massage" width="600" height="450" loading="lazy">
-              <span class="service-badge" data-i18n="s2_badge">Warming Therapy</span>
-            </div>
-            <div class="service-body">
-              <div class="service-meta">
-                <span class="service-tag" data-i18n="s2_tag">Combination</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s2_duration">45 / 60 Min</span></span>
-              </div>
-              <h3 class="service-title" data-i18n="s2_title">Energy Heat & Herbal Pack Therapy</h3>
-              <p class="service-desc" data-i18n="s2_desc">
-                Combines professional hands-on massage with customized herbal warming packs or energy heat to relieve deep muscular and joint tension.
-              </p>
-              <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_b1">Targeted herbal heat penetration</span></li>
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_b2">Optional moxa/cupping combination</span></li>
-              </ul>
-              <div class="service-footer">
-                <div class="service-price">
-                  <span class="service-price-label" data-i18n="s2_price_label">From</span>
-                  <span class="service-price-val" data-i18n="s2_price">$150 / 45 min</span>
-                </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Energy Heat & Herbal Pack Therapy" data-i18n="btn_book_service">
-                  Book Service
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Service 3: Acupuncture -->
-          <article class="service-card" data-category="acu">
-            <div class="service-image-box">
-              <img src="assets/images/service-tuina.jpg" alt="Traditional Acupuncture & TCM" width="600" height="450" loading="lazy">
-              <span class="service-badge" data-i18n="s3_badge">TCM Meridian</span>
-            </div>
-            <div class="service-body">
-              <div class="service-meta">
-                <span class="service-tag" data-i18n="s3_tag">Holistic Care</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s3_duration">30 / 45 / 60 Min</span></span>
-              </div>
-              <h3 class="service-title" data-i18n="s3_title">Traditional & Specialized Acupuncture</h3>
-              <p class="service-desc" data-i18n="s3_desc">
-                Individualized acupuncture based on constitution and presenting concerns, promoting natural healing, circulation, and pain relief.
-              </p>
-              <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_b1">Precise meridian acupoint stimulation</span></li>
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_b2">Available with moxibustion or cupping combo</span></li>
-              </ul>
-              <div class="service-footer">
-                <div class="service-price">
-                  <span class="service-price-label" data-i18n="s3_price_label">From</span>
-                  <span class="service-price-val" data-i18n="s3_price">$95 / 30 min</span>
-                </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Acupuncture Therapy" data-i18n="btn_book_service">
-                  Book Service
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Service 4: Moxibustion & Cupping -->
-          <article class="service-card" data-category="moxa">
-            <div class="service-image-box">
-              <img src="assets/images/service-cupping.jpg" alt="Moxibustion, Cupping & Gua Sha" width="600" height="450" loading="lazy">
-              <span class="service-badge" data-i18n="s4_badge">Ancient Wisdom</span>
-            </div>
-            <div class="service-body">
-              <div class="service-meta">
-                <span class="service-tag" data-i18n="s4_tag">Decompression</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s4_duration">30 / 45 / 60 Min</span></span>
-              </div>
-              <h3 class="service-title" data-i18n="s4_title">Moxibustion, Cupping & Gua Sha</h3>
-              <p class="service-desc" data-i18n="s4_desc">
-                Time-honored warming moxibustion, negative-pressure fire cupping, and jade scraping to relieve muscular tension and support vital energy flow.
-              </p>
-              <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_b1">Dispels deep chill and muscle stiffness</span></li>
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_b2">Supports micro-circulation & detoxification</span></li>
-              </ul>
-              <div class="service-footer">
-                <div class="service-price">
-                  <span class="service-price-label" data-i18n="s4_price_label">From</span>
-                  <span class="service-price-val" data-i18n="s4_price">$95 / 30 min</span>
-                </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Moxibustion & Cupping Therapy" data-i18n="btn_book_service">
-                  Book Service
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Service 5: Osteopathy -->
-          <article class="service-card" data-category="osteo">
-            <div class="service-image-box">
-              <img src="assets/images/clinic-interior.jpg" alt="Osteopathic Manual Therapy" width="600" height="450" loading="lazy">
-              <span class="service-badge" data-i18n="s5_badge">Structural Balance</span>
-            </div>
-            <div class="service-body">
-              <div class="service-meta">
-                <span class="service-tag" data-i18n="s5_tag">Manual Therapy</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s5_duration">30 / 45 / 60 / 90 / 120 Min</span></span>
-              </div>
-              <h3 class="service-title" data-i18n="s5_title">Osteopathic Manual Therapy</h3>
-              <p class="service-desc" data-i18n="s5_desc">
-                Hands-on treatment focused on the relationship between muscles, joints, fascia, and pelvic balance to improve mobility and body function.
-              </p>
-              <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_b1">Fascial release & joint mobilization</span></li>
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_b2">Postural and alignment optimization</span></li>
-              </ul>
-              <div class="service-footer">
-                <div class="service-price">
-                  <span class="service-price-label" data-i18n="s5_price_label">From</span>
-                  <span class="service-price-val" data-i18n="s5_price">$100 / 30 min</span>
-                </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Osteopathic Manual Therapy" data-i18n="btn_book_service">
-                  Book Service
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Service 6: TCM Consultations & Herbal Products -->
-          <article class="service-card" data-category="herbal">
-            <div class="service-image-box">
-              <img src="assets/images/service-head-spa.jpg" alt="TCM Consultation, Herbal Teas & Products" width="600" height="450" loading="lazy">
-              <span class="service-badge" data-i18n="s6_badge">Herbal Care</span>
-            </div>
-            <div class="service-body">
-              <div class="service-meta">
-                <span class="service-tag" data-i18n="s6_tag">Wellness & Teas</span>
-                <span class="service-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="s6_duration">Consultation & Products</span></span>
-              </div>
-              <h3 class="service-title" data-i18n="s6_title">TCM Consultation, Herbal Teas & Products</h3>
-              <p class="service-desc" data-i18n="s6_desc">
-                Comprehensive TCM assessment, custom herbal prescriptions, seasonal energy wellness teas, herbal eye compresses, and therapeutic pillows.
-              </p>
-              <ul class="service-benefits">
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_b1">Customized herbal prescriptions</span></li>
-                <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_b2">Handcrafted external wellness remedies</span></li>
-              </ul>
-              <div class="service-footer">
-                <div class="service-price">
-                  <span class="service-price-label" data-i18n="s6_price_label">From</span>
-                  <span class="service-price-val" data-i18n="s6_price">$8 / day</span>
-                </div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="TCM Consultation & Products" data-i18n="btn_book_service">
-                  Book Service
-                </button>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Complete 7-Category Interactive Services & Pricing Section -->
+<!-- Complete 7-Category Interactive Services & Pricing Section -->
     <section class="pricing-section fade-in-section" id="pricing">
       <div class="container">
         <div class="section-header">
@@ -1004,58 +790,7 @@
     </section>
 
     <!-- Acuity Scheduling Section -->
-    <section class="acuity-booking-section fade-in-section" id="booking">
-      <div class="container">
-        <div class="section-header">
-          <span class="subtitle-badge" data-i18n="acuity_badge">Online Scheduling</span>
-          <h2 class="heading-lg" data-i18n="acuity_title">Book Online Instantly</h2>
-          <p data-i18n="acuity_desc">Choose your treatment, duration, and practitioner with real-time confirmation.</p>
-        </div>
-
-        <div class="acuity-container-card">
-          <div class="acuity-top-bar">
-            <div class="acuity-clinic-info">
-              <span class="site-logo-title">HEXY 和熙元</span>
-            </div>
-            <button class="btn btn-outline btn-sm js-book-trigger" data-service="Acuity Direct Booking">
-              <i class="fa-solid fa-up-right-from-square"></i> <span data-i18n="acuity_btn_fullscreen">Open Fullscreen</span>
-            </button>
-          </div>
-
-          <!-- Acuity Embed Widget Container -->
-          <div class="acuity-frame-wrap">
-            <iframe src="https://app.acuityscheduling.com/schedule.php?owner=40451853" title="HEXY Wellness Clinic Acuity Scheduling" width="100%" height="620" frameBorder="0"></iframe>
-          </div>
-
-          <!-- 3-Step Process -->
-          <div class="acuity-steps-grid fade-in-stagger">
-            <div class="acuity-step-item">
-              <div class="acuity-step-number">1</div>
-              <div class="acuity-step-content">
-                <h4 data-i18n="acuity_step1_title">Select Treatment</h4>
-                <p data-i18n="acuity_step1_desc">Choose your preferred massage or wellness service and duration.</p>
-              </div>
-            </div>
-            <div class="acuity-step-item">
-              <div class="acuity-step-number">2</div>
-              <div class="acuity-step-content">
-                <h4 data-i18n="acuity_step2_title">Pick Date & Therapist</h4>
-                <p data-i18n="acuity_step2_desc">View open schedule slots and pick your dedicated practitioner.</p>
-              </div>
-            </div>
-            <div class="acuity-step-item">
-              <div class="acuity-step-number">3</div>
-              <div class="acuity-step-content">
-                <h4 data-i18n="acuity_step3_title">Instant Confirmation</h4>
-                <p data-i18n="acuity_step3_desc">Receive instant email and SMS confirmations with calendar sync.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Direct Insurance Billing Section -->
+<!-- Direct Insurance Billing Section -->
     <section class="insurance-section fade-in-section" id="direct-billing">
       <div class="container">
         <div class="insurance-wrapper">
@@ -1070,9 +805,6 @@
               <li><i class="fa-solid fa-check"></i> <span data-i18n="billing_check2"><strong>Pay Only The Co-Pay:</strong> Only pay remaining balance if any.</span></li>
               <li><i class="fa-solid fa-check"></i> <span data-i18n="billing_check3"><strong>Official Receipts:</strong> Issued instantly for your records.</span></li>
             </ul>
-            <button class="btn btn-primary js-book-trigger" data-service="Insurance RMT Session" data-i18n="billing_btn">
-              Book RMT Treatment
-            </button>
           </div>
 
           <div class="insurance-providers-card">
@@ -1182,7 +914,7 @@
       </div>
     </section>
 
-    <!-- Location, Hours & Netlify Contact Form -->
+    <!-- Location, Hours & Email Inquiry Form -->
     <section class="contact-section fade-in-section" id="contact">
       <div class="container">
         <div class="contact-grid">
@@ -1241,18 +973,12 @@
             </div>
           </div>
 
-          <!-- Netlify Compatible Contact Form -->
+          <!-- Email Inquiry Form -->
           <div class="contact-form-card">
             <h3 data-i18n="contact_form_title">Send an Inquiry</h3>
-            <p data-i18n="contact_form_subtitle">Have a question or custom wellness request? Send us a message.</p>
+            <p data-i18n="contact_form_subtitle">Complete this form to open an email draft. Send it from your email app, or email info@bestlifemassage.com directly.</p>
 
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="clinicContactForm">
-              <!-- Netlify Honeypot Anti-Spam Field -->
-              <input type="hidden" name="form-name" value="contact">
-              <p style="display:none;">
-                <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-              </p>
-
+            <form name="contact" action="mailto:info@bestlifemassage.com" method="GET" id="clinicContactForm">
               <div class="form-row">
                 <div class="form-group">
                   <label for="name" data-i18n="form_name_label">Full Name *</label>
@@ -1291,7 +1017,7 @@
               </div>
 
               <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="form_btn_send">
-                Send Message
+                Open Email Draft
               </button>
             </form>
           </div>

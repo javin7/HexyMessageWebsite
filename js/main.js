@@ -180,30 +180,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4500);
   };
 
-  // 8. Netlify Contact Form AJAX Handler with Toast
+  // 8. Prepare an inquiry in the visitor's email app.
   const contactForm = document.getElementById('clinicContactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-      // If deployed on Netlify, standard POST works natively,
-      // but we can provide instant optimistic UI feedback
-      const formData = new FormData(contactForm);
-      
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then(() => {
-        showToast('Thank you! Your message has been sent to our clinic team.');
-        contactForm.reset();
-      })
-      .catch((error) => {
-        // Fallback for local testing
-        showToast('Thank you! Your request has been received.');
-        contactForm.reset();
-      });
-
       e.preventDefault();
+      const formData = new FormData(contactForm);
+      const subject = `Clinic inquiry: ${formData.get('treatment')}`;
+      const body = [
+        `Name: ${formData.get('name')}`,
+        `Phone: ${formData.get('phone')}`,
+        `Email: ${formData.get('email')}`,
+        `Service: ${formData.get('treatment')}`,
+        '',
+        formData.get('message') || ''
+      ].join('\r\n');
+      window.location.href = `mailto:${SITE_CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 
