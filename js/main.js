@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Central Configuration Initializer
   const config = typeof SITE_CONFIG !== 'undefined' ? SITE_CONFIG : {
     businessName: "BEST LIFE 和熙元",
-    phone: "(416) 939-8888",
+    phone: "(416) 878-9887",
     acuity: {
       schedulingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853",
       directBookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853"

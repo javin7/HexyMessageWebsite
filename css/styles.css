@@ -1206,6 +1206,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.55;
 }
 
+.service-menu-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
 .pricing-item-rates {
   display: flex;
   align-items: center;

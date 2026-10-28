@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>HEXY Wellness Clinic 和熙元 | Professional Therapy & Traditional Chinese Medicine</title>
-  <meta name="description" content="HEXY Wellness Clinic 和熙元 at 530 Yonge St, Unit 2, Toronto. Registered Massage Therapy (RMT), Acupuncture, Moxibustion, Cupping, Osteopathy, and TCM. Direct billing available.">
-  <meta name="keywords" content="HEXY Wellness Clinic, 和熙元, Massage Therapy Toronto, RMT, Acupuncture Toronto, Moxibustion, Cupping Therapy, Osteopathy, TCM, Direct Billing, 530 Yonge St">
+  <meta name="description" content="HEXY Wellness Clinic 和熙元 at 530 Yonge St, Unit 2, Toronto. Massage Therapy, Acupuncture, Osteopathic Treatment, and TCM Consultation. Direct billing available.">
+  <meta name="keywords" content="HEXY Wellness Clinic, 和熙元, Massage Therapy Toronto, Acupuncture Toronto, Osteopathic Treatment, TCM, Direct Billing, 530 Yonge St">
   
   <!-- OpenGraph / Social Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="HEXY Wellness Clinic 和熙元 | Professional Therapy & TCM">
-  <meta property="og:description" content="Registered Massage Therapy, Acupuncture, Moxibustion, Cupping, Osteopathy and Traditional Chinese Medicine in downtown Toronto.">
+  <meta property="og:description" content="Massage Therapy, Acupuncture, Osteopathic Treatment and Traditional Chinese Medicine in downtown Toronto.">
   <meta property="og:image" content="assets/images/hero-spa.jpg">
   <meta name="theme-color" content="#a67a4e">
 
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Master Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=acuity-new-tab-20260922">
+  <link rel="stylesheet" href="css/styles.css?v=services-20261028">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -34,6 +34,10 @@
     "name": "HEXY Wellness Clinic 和熙元",
     "image": "assets/images/hero-spa.jpg",
     "telephone": "+1-416-878-9887",
+    "contactPoint": [
+      {"@type": "ContactPoint", "telephone": "+1-437-255-7897", "contactType": "direct"},
+      {"@type": "ContactPoint", "telephone": "+1-416-878-9887", "contactType": "business"}
+    ],
     "email": "lifegotbetter@evergreenheath.com",
     "url": "https://bestlifemassage.com",
     "address": {
@@ -44,7 +48,6 @@
       "postalCode": "M4Y 1X9",
       "addressCountry": "CA"
     },
-    "priceRange": "$8 - $380",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -74,7 +77,7 @@
         </div>
         <div class="announcement-item announcement-phone">
           <i class="fa-solid fa-phone"></i>
-          <a href="tel:14168789887">(416) 878-9887</a>
+          <a href="tel:14168789887"><span data-i18n="phone_business_label">Business</span>: (416) 878-9887</a>
         </div>
       </div>
       <div class="announcement-info announcement-extra">
@@ -101,7 +104,7 @@
       <nav class="main-nav" aria-label="Primary Navigation">
         <ul class="nav-links">
           <li><a href="#direct-billing" class="nav-link" data-i18n="nav_billing">Direct Billing</a></li>
-          <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Services & Rates</a></li>
+          <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Services</a></li>
           <li><a href="#about" class="nav-link" data-i18n="nav_philosophy">Philosophy</a></li>
           <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
         </ul>
@@ -137,7 +140,7 @@
     </div>
     <ul class="mobile-nav-links">
       <li><a href="#direct-billing" class="mobile-nav-link" data-i18n="nav_billing">Direct Billing</a></li>
-      <li><a href="#pricing" class="mobile-nav-link" data-i18n="nav_pricing">Services & Rates</a></li>
+      <li><a href="#pricing" class="mobile-nav-link" data-i18n="nav_pricing">Services</a></li>
       <li><a href="#about" class="mobile-nav-link" data-i18n="nav_philosophy">Philosophy</a></li>
       <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
       <li><a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Contact</a></li>
@@ -163,16 +166,12 @@
             <h1 class="heading-xl hero-title">
               <span data-i18n="hero_title_1">Restorative Bodywork,</span> <br><span data-i18n="hero_title_2">Deep Inner Harmony.</span>
             </h1>
-            <p class="hero-lead" data-i18n="hero_lead">
-              Professional Registered Massage Therapy (RMT), Acupuncture, Moxibustion, Cupping, Osteopathic Manual Therapy, and Traditional Chinese Medicine in downtown Toronto.
-            </p>
+            <p class="hero-lead" data-i18n="hero_lead">Massage Therapy, acupuncture, osteopathic treatment, and Traditional Chinese Medicine consultation in downtown Toronto.</p>
             <div class="hero-cta-group">
               <button class="btn btn-primary btn-lg js-book-trigger" data-service="Initial Treatment" data-i18n="hero_btn_book">
                 Book Appointment
               </button>
-              <a href="#pricing" class="btn btn-outline btn-lg" data-i18n="nav_pricing">
-                Services & Rates
-              </a>
+              <a href="#pricing" class="btn btn-outline btn-lg" data-i18n="nav_pricing">Services</a>
             </div>
             <div class="hero-features-list">
               <div class="hero-feature-item">
@@ -199,593 +198,355 @@
       </div>
     </section>
 
-    <!-- Treatments & Services Overview Section -->
-<!-- Complete 7-Category Interactive Services & Pricing Section -->
     <section class="pricing-section fade-in-section" id="pricing">
       <div class="container">
         <div class="section-header">
-          <span class="subtitle-badge" data-i18n="pricing_badge">Complete Menu & Pricing</span>
-          <h2 class="heading-lg" data-i18n="pricing_title">Professional Services & Pricing</h2>
-          <p data-i18n="pricing_desc">All treatments are provided by appropriately qualified and registered practitioners within their professional scope of practice.</p>
+          <span class="subtitle-badge" data-i18n="services_badge">Our Services</span>
+          <h2 class="heading-lg" data-i18n="services_title">Treatments & Services</h2>
+          <p data-i18n="services_intro">Explore our treatments and wellness products. View current prices and availability on our booking page.</p>
         </div>
-
-        <!-- Professional Scope Notice Banner -->
-        <div class="pricing-scope-notice">
-          <i class="fa-solid fa-circle-info"></i>
-          <span data-i18n="pricing_scope_text"><strong>Professional Scope Notice:</strong> Treatments are customized according to each client's individual needs. Treatment combinations and modalities are selected by the practitioner based on professional assessment and suitability.</span>
-        </div>
-
-        <!-- 7 Category Switcher Navigation Tabs -->
         <div class="pricing-cat-nav">
-          <button class="pricing-cat-btn active" data-pricing-target="cat-rmt" data-i18n="ptab_1">1. Registered Massage (RMT)</button>
-          <button class="pricing-cat-btn" data-pricing-target="cat-acu" data-i18n="ptab_2">2. Acupuncture</button>
-          <button class="pricing-cat-btn" data-pricing-target="cat-moxa" data-i18n="ptab_3">3. Moxa, Cupping & Gua Sha</button>
-          <button class="pricing-cat-btn" data-pricing-target="cat-osteo" data-i18n="ptab_4">4. Osteopathic Manual</button>
-          <button class="pricing-cat-btn" data-pricing-target="cat-tcm" data-i18n="ptab_5">5. TCM & External Therapies</button>
-          <button class="pricing-cat-btn" data-pricing-target="cat-prod" data-i18n="ptab_6">6. Herbal Wellness Products</button>
-          <button class="pricing-cat-btn" data-pricing-target="cat-tea" data-i18n="ptab_7">7. Herbal Teas & Seasonal</button>
+          <button class="pricing-cat-btn active" data-pricing-target="cat-massage" data-i18n="category_massage">Massage</button>
+          <button class="pricing-cat-btn" data-pricing-target="cat-tcm" data-i18n="category_tcm">TCM Consultation</button>
+          <button class="pricing-cat-btn" data-pricing-target="cat-acu" data-i18n="category_acu">Acupuncture</button>
+          <button class="pricing-cat-btn" data-pricing-target="cat-osteo" data-i18n="category_osteo">Osteopathic Treatment</button>
+          <button class="pricing-cat-btn" data-pricing-target="cat-products" data-i18n="category_products">Products & Additional Services</button>
         </div>
-
-        <!-- CATEGORY 1: REGISTERED MASSAGE THERAPY -->
-        <div class="pricing-panel active" id="cat-rmt">
+        <div class="pricing-panel active" id="cat-massage">
           <div class="pricing-items-list">
-            
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_standard_title">Registered Massage Therapy (RMT)</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_standard_cn">注册按摩 / 普通推拿</span>
+                  <h3 class="pricing-item-title" data-i18n="service_massage_0">Standard Massage Therapy</h3>
+                  <span class="pricing-item-cn" data-i18n="service_massage_0_secondary">普通按摩理疗</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_standard_desc">Professional hands-on massage therapy to relieve muscle tension, reduce discomfort, promote relaxation and support overall well-being.</p>
+                <p class="pricing-item-desc" data-i18n="service_massage_0_duration">30 / 45 / 60 / 90 / 120 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">30 Min</span><span class="rate-pill-price">$95</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">45 Min</span><span class="rate-pill-price">$120</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$150</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">90 Min</span><span class="rate-pill-price">$225</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">120 Min</span><span class="rate-pill-price">$300</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Registered Massage Therapy (RMT)">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Standard Massage Therapy" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_combo_title">RMT Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_combo_cn">注册按摩综合调理</span>
+                  <h3 class="pricing-item-title" data-i18n="service_massage_1">Prenatal Massage Therapy</h3>
+                  <span class="pricing-item-cn" data-i18n="service_massage_1_secondary">孕妇按摩理疗</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_combo_desc">RMT combined with selected traditional therapies such as moxibustion, cupping or Gua Sha according to individual needs.</p>
+                <p class="pricing-item-desc" data-i18n="service_massage_1_duration">30 / 45 / 60 / 90 / 120 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$190</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="RMT Combination Therapy">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Prenatal Massage Therapy" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_energy_heat_title">Energy Heat Massage Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_energy_heat_cn">能量热推拿</span>
+                  <h3 class="pricing-item-title" data-i18n="service_massage_2">Moxa Stick Massage Therapy</h3>
+                  <span class="pricing-item-cn" data-i18n="service_massage_2_secondary">灸棒按摩理疗</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_energy_heat_desc">Combines professional massage techniques with therapeutic warming treatment to provide deeper relaxation and relieve tension.</p>
+                <p class="pricing-item-desc" data-i18n="service_massage_2_duration">30 / 45 / 60 / 90 / 120 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">45 Min</span><span class="rate-pill-price">$150</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$190</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Energy Heat Massage Therapy">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Moxa Stick Massage Therapy" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_energy_heat_combo_title">Energy Heat Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_energy_heat_combo_cn">能量热综合调理</span>
+                  <h3 class="pricing-item-title" data-i18n="service_massage_3">Energy Pack Massage Therapy</h3>
+                  <span class="pricing-item-cn" data-i18n="service_massage_3_secondary">能量包按摩理疗</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_energy_heat_combo_desc">Energy Heat Massage Therapy combined with selected traditional therapies according to individual needs.</p>
+                <p class="pricing-item-desc" data-i18n="service_massage_3_duration">45 / 60 / 90 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$230</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Energy Heat Combination Therapy">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Energy Pack Massage Therapy" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_energy_pack_title">Energy Pack Massage Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_energy_pack_cn">能量包推拿</span>
+                  <h3 class="pricing-item-title" data-i18n="service_massage_4">Herbal Pack Massage Therapy</h3>
+                  <span class="pricing-item-cn" data-i18n="service_massage_4_secondary">中药包按摩理疗</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_energy_pack_desc">Combines specialized warming energy packs with hands-on therapy to relieve muscle and soft-tissue tension.</p>
+                <p class="pricing-item-desc" data-i18n="service_massage_4_duration">45 / 60 / 90 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">45 Min</span><span class="rate-pill-price">$180</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$260</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Energy Pack Massage Therapy">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Herbal Pack Massage Therapy" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_energy_pack_combo_title">Energy Pack Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_energy_pack_combo_cn">能量包综合调理</span>
+                  <h3 class="pricing-item-title" data-i18n="service_massage_5">Warm Wax Massage Therapy</h3>
+                  <span class="pricing-item-cn" data-i18n="service_massage_5_secondary">热蜡按摩理疗</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_energy_pack_combo_desc">Energy Pack Massage Therapy combined with selected traditional therapies.</p>
+                <p class="pricing-item-desc" data-i18n="service_massage_5_duration">60 / 90 / 120 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$300</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Energy Pack Combination Therapy">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Warm Wax Massage Therapy" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_herbal_pack_title">Chinese Herbal Pack Massage Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_herbal_pack_cn">中药包推拿</span>
+                  <h3 class="pricing-item-title" data-i18n="service_massage_6">Thai Massage</h3>
+                  <span class="pricing-item-cn" data-i18n="service_massage_6_secondary">泰式按摩理疗</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_herbal_pack_desc">Customized Chinese herbal warming packs selected according to individual constitution and combined with professional massage.</p>
+                <p class="pricing-item-desc" data-i18n="service_massage_6_duration">60 / 90 / 120 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$260</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Chinese Herbal Pack Massage Therapy">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Thai Massage" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_herbal_pack_combo_title">Chinese Herbal Pack Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_herbal_pack_combo_cn">中药包综合调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_herbal_pack_combo_desc">Chinese Herbal Pack Massage Therapy combined with selected traditional therapies according to individual needs.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$300</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Chinese Herbal Pack Combination Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_lymphatic_title">Lymphatic Relaxation Massage</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_lymphatic_cn">淋巴舒缓推拿</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_lymphatic_desc">Gentle, specialized massage techniques designed to support lymphatic flow and circulation while promoting full-body relaxation.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$190</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">90 Min</span><span class="rate-pill-price">$285</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">120 Min</span><span class="rate-pill-price">$380</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Lymphatic Relaxation Massage">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_rmt_thai_title">Thai Massage Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_rmt_thai_cn">泰式推拿</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_rmt_thai_desc">Full-body treatment incorporating traditional pressure techniques and assisted body movements to improve flexibility and relieve tension.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$190</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">90 Min</span><span class="rate-pill-price">$285</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">120 Min</span><span class="rate-pill-price">$380</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Thai Massage Therapy">Book</button>
-              </div>
-            </div>
-
           </div>
+          <p class="service-menu-note" data-i18n="note_massage">Standard, prenatal, moxa stick and energy pack massage therapy are performed with clothing on.</p>
         </div>
-
-        <!-- CATEGORY 2: ACUPUNCTURE -->
-        <div class="pricing-panel" id="cat-acu">
-          <div class="pricing-items-list">
-            
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_acu_trad_title">Traditional Acupuncture</h3>
-                  <span class="pricing-item-cn" data-i18n="p_acu_trad_cn">普通针灸</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_acu_trad_desc">Individualized acupuncture treatment designed to address physical discomfort, promote relaxation and support overall health.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">30 Min</span><span class="rate-pill-price">$95</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">45 Min</span><span class="rate-pill-price">$120</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$150</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Traditional Acupuncture">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_acu_trad_combo_title">Traditional Acupuncture Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_acu_trad_combo_cn">普通针灸综合调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_acu_trad_combo_desc">Traditional Acupuncture combined with moxibustion, Gua Sha, cupping or therapeutic massage according to individual needs.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$190</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Traditional Acupuncture Combination">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_acu_spec_title">Specialized Acupuncture</h3>
-                  <span class="pricing-item-cn" data-i18n="p_acu_spec_cn">特色针灸</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_acu_spec_desc">An advanced individualized acupuncture treatment based on the client's constitution, presenting concerns and overall condition.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$180</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Specialized Acupuncture">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_acu_spec_combo_title">Specialized Acupuncture Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_acu_spec_combo_cn">特色针灸综合调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_acu_spec_combo_desc">Specialized Acupuncture combined with one or more traditional therapies such as moxibustion, Gua Sha, cupping or therapeutic massage.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$220</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Specialized Acupuncture Combination">Book</button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- CATEGORY 3: MOXIBUSTION & TRADITIONAL THERAPIES -->
-        <div class="pricing-panel" id="cat-moxa">
-          <div class="pricing-items-list">
-            
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_moxa_title">Moxibustion Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_moxa_cn">艾灸调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_moxa_desc">Traditional warming therapy using moxibustion techniques to promote relaxation, improve comfort and support overall balance.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">30 Min</span><span class="rate-pill-price">$115</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">45 Min</span><span class="rate-pill-price">$140</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$170</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Moxibustion Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_moxa_combo_title">Moxibustion Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_moxa_combo_cn">艾灸综合调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_moxa_combo_desc">Moxibustion combined with selected traditional therapies according to individual needs.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$210</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Moxibustion Combination Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_cup_title">Cupping Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_cup_cn">拔罐调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_cup_desc">Traditional cupping therapy designed to relieve muscular tension, promote relaxation and support circulation.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">30 Min</span><span class="rate-pill-price">$95</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">45 Min</span><span class="rate-pill-price">$120</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$150</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Cupping Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_cup_combo_title">Cupping Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_cup_combo_cn">拔罐综合调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_cup_combo_desc">Cupping combined with selected traditional therapies according to individual needs.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$190</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Cupping Combination Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_guasha_title">Gua Sha Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_guasha_cn">刮痧调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_guasha_desc">Traditional Gua Sha treatment designed to relieve muscular tension, promote circulation and support physical relaxation.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">30 Min</span><span class="rate-pill-price">$95</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">45 Min</span><span class="rate-pill-price">$120</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$150</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Gua Sha Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_guasha_combo_title">Gua Sha Combination Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_guasha_combo_cn">刮痧综合调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_guasha_combo_desc">Gua Sha combined with selected traditional therapies according to individual needs.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$190</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Gua Sha Combination Therapy">Book</button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- CATEGORY 4: OSTEOPATHIC MANUAL THERAPY -->
-        <div class="pricing-panel" id="cat-osteo">
-          <div class="pricing-items-list">
-            
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_osteo_title">Osteopathic Manual Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_osteo_cn">正骨调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_osteo_desc">Professional hands-on treatment focused on the relationship between muscles, joints, fascia, pelvic balance and body structure to relieve tension and improve mobility.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">30 Min</span><span class="rate-pill-price">$100</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">45 Min</span><span class="rate-pill-price">$130</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$160</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">90 Min</span><span class="rate-pill-price">$240</span></div>
-                <div class="rate-pill"><span class="rate-pill-dur">120 Min</span><span class="rate-pill-price">$320</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Osteopathic Manual Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_osteo_combo_title">Osteopathic Manual Therapy Combination</h3>
-                  <span class="pricing-item-cn" data-i18n="p_osteo_combo_cn">正骨综合调理</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_osteo_combo_desc">Osteopathic Manual Therapy combined with selected traditional therapies such as moxibustion, cupping, Gua Sha or therapeutic massage.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">60 Min</span><span class="rate-pill-price">$200</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Osteopathic Combination Therapy">Book</button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- CATEGORY 5: TRADITIONAL CHINESE MEDICINE -->
         <div class="pricing-panel" id="cat-tcm">
           <div class="pricing-items-list">
-            
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_tcm_init_title">Initial TCM Consultation</h3>
-                  <span class="pricing-item-cn" data-i18n="p_tcm_init_cn">中医首诊</span>
+                  <h3 class="pricing-item-title" data-i18n="service_tcm_0">Initial Consultation & Wellness Advice</h3>
+                  <span class="pricing-item-cn" data-i18n="service_tcm_0_secondary">首诊及调理建议</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_tcm_init_desc">Comprehensive Traditional Chinese Medicine consultation including individualized assessment and wellness recommendations.</p>
+                <p class="pricing-item-desc" data-i18n="service_tcm_0_duration">30 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">30 Min</span><span class="rate-pill-price">$80</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Initial TCM Consultation">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Initial Consultation & Wellness Advice" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_tcm_follow_title">TCM Follow-Up & Herbal Prescription</h3>
-                  <span class="pricing-item-cn" data-i18n="p_tcm_follow_cn">中医复诊及开方</span>
+                  <h3 class="pricing-item-title" data-i18n="service_tcm_1">Follow-up & Herbal Prescription</h3>
+                  <span class="pricing-item-cn" data-i18n="service_tcm_1_secondary">复诊开方</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_tcm_follow_desc">Follow-up consultation and adjustment of the individualized treatment or herbal plan.</p>
+                <p class="pricing-item-desc" data-i18n="service_tcm_1_duration">15 min</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">15 Min</span><span class="rate-pill-price">$30</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="TCM Follow-Up & Prescription">Book</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Follow-up & Herbal Prescription" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
             <div class="pricing-item-card">
               <div class="pricing-item-info">
                 <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_tcm_herb_formula_title">Customized Chinese Herbal Formula</h3>
-                  <span class="pricing-item-cn" data-i18n="p_tcm_herb_formula_cn">中药配方</span>
+                  <h3 class="pricing-item-title" data-i18n="service_tcm_2">Chinese Herbal Medicine</h3>
+                  <span class="pricing-item-cn" data-i18n="service_tcm_2_secondary">中药</span>
                 </div>
-                <p class="pricing-item-desc" data-i18n="p_tcm_herb_formula_desc">Individualized Chinese herbal formulas selected according to the client's TCM consultation and personal needs.</p>
               </div>
               <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">Per Unit</span><span class="rate-pill-price">$12 / packet</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Chinese Herbal Formula">Inquire</button>
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Chinese Herbal Medicine" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_tcm_ear_seed_title">Ear Seed Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_tcm_ear_seed_cn">耳穴贴</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_tcm_ear_seed_desc">Traditional auricular acupressure using specialized ear seeds applied to selected meridian points.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">Per Session</span><span class="rate-pill-price">$40</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Ear Seed Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_tcm_patch_title">Chinese Herbal Patch Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_tcm_patch_cn">中药贴</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_tcm_patch_desc">Traditional external herbal therapy applied according to individual needs.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">Per Session</span><span class="rate-pill-price">$40</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Chinese Herbal Patch Therapy">Book</button>
-              </div>
-            </div>
-
-            <div class="pricing-item-card">
-              <div class="pricing-item-info">
-                <div class="pricing-item-header">
-                  <h3 class="pricing-item-title" data-i18n="p_tcm_sanfu_title">San Fu Herbal Patch Therapy</h3>
-                  <span class="pricing-item-cn" data-i18n="p_tcm_sanfu_cn">三伏贴</span>
-                </div>
-                <p class="pricing-item-desc" data-i18n="p_tcm_sanfu_desc">Seasonal Traditional Chinese Medicine herbal patch therapy.</p>
-              </div>
-              <div class="pricing-item-rates">
-                <div class="rate-pill"><span class="rate-pill-dur">Per Session</span><span class="rate-pill-price">$40</span></div>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="San Fu Herbal Patch Therapy">Book</button>
-              </div>
-            </div>
-
-          </div>
-          <p style="font-size:0.8rem; color:var(--text-muted); font-style:italic; text-align:center;" data-i18n="p_tcm_note">* First-time clients receiving applicable TCM treatments may require an Initial TCM Consultation prior to treatment.</p>
-        </div>
-
-        <!-- CATEGORY 6: HERBAL WELLNESS PRODUCTS -->
-        <div class="pricing-panel" id="cat-prod">
-          <div class="products-grid">
-            
-            <div class="product-card">
-              <div class="product-card-top">
-                <h3 class="product-card-title" data-i18n="prod_eye_title">Chinese Herbal Eye Compress</h3>
-                <div class="product-card-cn" data-i18n="prod_eye_cn">中药眼敷</div>
-                <p class="product-card-desc" data-i18n="prod_eye_desc">Approximately 2 months of use per box. Includes an additional 2-month supply of complementary herbal patches (4 months total combined use).</p>
-              </div>
-              <div class="product-card-footer">
-                <span class="product-card-price">$60 <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-body); font-weight:normal;">/ box</span></span>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Herbal Eye Compress">Inquire</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-card-top">
-                <h3 class="product-card-title" data-i18n="prod_pills_title">Chinese Herbal Wellness Pills</h3>
-                <div class="product-card-cn" data-i18n="prod_pills_cn">中药调理丸</div>
-                <p class="product-card-desc" data-i18n="prod_pills_desc">A typical wellness program includes approximately 3–4 bottles over one month, depending on individual recommendations.</p>
-              </div>
-              <div class="product-card-footer">
-                <span class="product-card-price">$9 <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-body); font-weight:normal;">/ bottle</span></span>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Herbal Wellness Pills">Inquire</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-card-top">
-                <h3 class="product-card-title" data-i18n="prod_foot_title">Chinese Herbal Foot Bath Packs</h3>
-                <div class="product-card-cn" data-i18n="prod_foot_cn">中药足浴包</div>
-                <p class="product-card-desc" data-i18n="prod_foot_desc">Premium herbal blend for warming foot soak rituals to promote restorative sleep and energy circulation (bag of 15 packs).</p>
-              </div>
-              <div class="product-card-footer">
-                <span class="product-card-price">$50 <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-body); font-weight:normal;">/ 15 packs</span></span>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Herbal Foot Bath Packs">Inquire</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-card-top">
-                <h3 class="product-card-title" data-i18n="prod_neck_title">Herbal Neck Pillow</h3>
-                <div class="product-card-cn" data-i18n="prod_neck_cn">中药颈枕</div>
-                <p class="product-card-desc" data-i18n="prod_neck_desc">Ergonomic herbal-filled neck support for soothing cervical stiffness and improving posture comfort.</p>
-              </div>
-              <div class="product-card-footer">
-                <span class="product-card-price">$40 <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-body); font-weight:normal;">each</span></span>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Herbal Neck Pillow">Inquire</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-card-top">
-                <h3 class="product-card-title" data-i18n="prod_pillow_title">Traditional Herbal Wellness Pillow</h3>
-                <div class="product-card-cn" data-i18n="prod_pillow_cn">中药养生枕</div>
-                <p class="product-card-desc" data-i18n="prod_pillow_desc">Available with different herbal formulations intended to support relaxation, restful sleep and stress management.</p>
-              </div>
-              <div class="product-card-footer">
-                <span class="product-card-price">$100 <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-body); font-weight:normal;">each</span></span>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Herbal Wellness Pillow">Inquire</button>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-card-top">
-                <h3 class="product-card-title" data-i18n="prod_sachet_title">Traditional Herbal Sachet</h3>
-                <div class="product-card-cn" data-i18n="prod_sachet_cn">中药香囊</div>
-                <p class="product-card-desc" data-i18n="prod_sachet_desc">Aromatic herbal sachet crafted with traditional botanicals for calming ambient fragrance and wellness.</p>
-              </div>
-              <div class="product-card-footer">
-                <span class="product-card-price">$40 <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-body); font-weight:normal;">each</span></span>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Traditional Herbal Sachet">Inquire</button>
-              </div>
-            </div>
-
           </div>
         </div>
-
-        <!-- CATEGORY 7: HERBAL TEA & SEASONAL WELLNESS -->
-        <div class="pricing-panel" id="cat-tea">
-          <div class="products-grid" style="grid-template-columns: repeat(2, 1fr);">
-            
-            <div class="product-card">
-              <div class="product-card-top">
-                <h3 class="product-card-title" data-i18n="tea_seasonal_title">Seasonal Energy Wellness Tea</h3>
-                <div class="product-card-cn" data-i18n="tea_seasonal_cn">时空节气能量茶</div>
-                <p class="product-card-desc" data-i18n="tea_seasonal_desc">An individualized herbal wellness tea program selected according to seasonal changes and personal constitution. Each seasonal wellness cycle is approximately 15 days. Advance reservation and payment required.</p>
+        <div class="pricing-panel" id="cat-acu">
+          <div class="pricing-items-list">
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_acu_0">Standard Acupuncture</h3>
+                  <span class="pricing-item-cn" data-i18n="service_acu_0_secondary">普通针灸</span>
+                </div>
+                <p class="pricing-item-desc" data-i18n="service_acu_0_duration">30 / 45 / 60 / 90 min</p>
               </div>
-              <div class="product-card-footer">
-                <span class="product-card-price">$8 <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-body); font-weight:normal;">/ day (15-day cycle)</span></span>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Seasonal Energy Wellness Tea">Order Cycle</button>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Standard Acupuncture" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
-            <div class="product-card">
-              <div class="product-card-top">
-                <h3 class="product-card-title" data-i18n="tea_collection_title">Herbal Wellness Tea Collection</h3>
-                <div class="product-card-cn" data-i18n="tea_collection_cn">日常养生茶系列</div>
-                <p class="product-card-desc" data-i18n="tea_collection_desc">Box of 30 specialized herbal tea bags. Available selections: <strong>Beauty & Radiance Tea</strong> (美容养颜茶), <strong>Weight Management Tea</strong> (轻体调理茶), and <strong>Late-Night Recovery Tea</strong> (熬夜调理茶).</p>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_acu_1">Combination Treatment</h3>
+                  <span class="pricing-item-cn" data-i18n="service_acu_1_secondary">针灸套餐</span>
+                </div>
+                <p class="pricing-item-desc" data-i18n="service_acu_1_duration">30 / 45 / 60 / 90 min</p>
               </div>
-              <div class="product-card-footer">
-                <span class="product-card-price">$50 <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-body); font-weight:normal;">/ 30 bags</span></span>
-                <button class="btn btn-outline btn-sm js-book-trigger" data-service="Herbal Wellness Tea Collection">Order Box</button>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Combination Treatment" data-i18n="view_booking">View booking</a>
               </div>
             </div>
-
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_acu_2">Cheek Acupuncture</h3>
+                  <span class="pricing-item-cn" data-i18n="service_acu_2_secondary">颊针</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Cheek Acupuncture" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_acu_3">Cheek Acupuncture Package (Auricular Therapy & Herbal Medicine)</h3>
+                  <span class="pricing-item-cn" data-i18n="service_acu_3_secondary">颊针套餐（耳穴、中药）</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Cheek Acupuncture Package (Auricular Therapy & Herbal Medicine)" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+          </div>
+          <p class="service-menu-note" data-i18n="note_acu">Combination options: Gua Sha / Massage Therapy / Moxibustion / Cupping.</p>
+        </div>
+        <div class="pricing-panel" id="cat-osteo">
+          <div class="pricing-items-list">
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_osteo_0">Standard Osteopathic Treatment</h3>
+                  <span class="pricing-item-cn" data-i18n="service_osteo_0_secondary">普通整骨</span>
+                </div>
+                <p class="pricing-item-desc" data-i18n="service_osteo_0_duration">30 / 45 / 60 / 90 / 120 min</p>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Standard Osteopathic Treatment" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_osteo_1">Osteopathic Treatment with Moxa Sticks</h3>
+                  <span class="pricing-item-cn" data-i18n="service_osteo_1_secondary">灸棒整骨</span>
+                </div>
+                <p class="pricing-item-desc" data-i18n="service_osteo_1_duration">30 / 45 / 60 / 90 / 120 min</p>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Osteopathic Treatment with Moxa Sticks" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_osteo_2">Osteopathic Treatment with Energy Packs</h3>
+                  <span class="pricing-item-cn" data-i18n="service_osteo_2_secondary">能量包整骨</span>
+                </div>
+                <p class="pricing-item-desc" data-i18n="service_osteo_2_duration">45 / 60 / 90 min</p>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Osteopathic Treatment with Energy Packs" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_osteo_3">Osteopathic Treatment with Herbal Packs</h3>
+                  <span class="pricing-item-cn" data-i18n="service_osteo_3_secondary">中药包整骨</span>
+                </div>
+                <p class="pricing-item-desc" data-i18n="service_osteo_3_duration">45 / 60 / 90 min</p>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Osteopathic Treatment with Herbal Packs" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
           </div>
         </div>
-
+        <div class="pricing-panel" id="cat-products">
+          <div class="pricing-items-list">
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_0">Chinese Herbal Eye Mask</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_0_secondary">中药眼罩</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Chinese Herbal Eye Mask" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_1">Neck Pillow</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_1_secondary">颈枕</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Neck Pillow" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_2">Herbal Pillow (Sleep, Stress Relief & Mood Support)</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_2_secondary">药枕（安眠、减压、情绪调理）</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Herbal Pillow (Sleep, Stress Relief & Mood Support)" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_3">Herbal Sachet</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_3_secondary">香囊</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Herbal Sachet" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_4">Auricular Acupressure Patches</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_4_secondary">耳穴贴</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Auricular Acupressure Patches" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_5">Chinese Herbal Patch Treatment</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_5_secondary">中药贴</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Chinese Herbal Patch Treatment" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_6">Sanfu Herbal Patch Treatment</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_6_secondary">三伏贴</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Sanfu Herbal Patch Treatment" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_7">Shikong Solar-Term Energy Tea</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_7_secondary">时空节气能量茶</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Shikong Solar-Term Energy Tea" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+            <div class="pricing-item-card">
+              <div class="pricing-item-info">
+                <div class="pricing-item-header">
+                  <h3 class="pricing-item-title" data-i18n="service_products_8">Chinese Herbal Pills</h3>
+                  <span class="pricing-item-cn" data-i18n="service_products_8_secondary">中药丸</span>
+                </div>
+              </div>
+              <div class="pricing-item-rates">
+                <a class="btn btn-outline btn-sm" href="https://app.acuityscheduling.com/schedule.php?owner=40451853" target="_blank" rel="noopener noreferrer" data-service="Chinese Herbal Pills" data-i18n="view_booking">View booking</a>
+              </div>
+            </div>
+          </div>
+          <p class="service-menu-note" data-i18n="note_products">Herbal eye mask: Two-month supply plus two months of herbal patches; four months total.<br>Sanfu treatment: Consultation excluded. Initial TCM consultation required for first-time clients.<br>Solar-term tea: Advance booking and payment required; approximately 15 days per solar term.<br>Herbal pills: Three to four bottles per one-month course.</p>
+        </div>
       </div>
     </section>
 
@@ -797,9 +558,7 @@
           <div class="insurance-text">
             <span class="insurance-badge"><i class="fa-solid fa-shield-check"></i> <span data-i18n="billing_badge">Direct Billing Accepted</span></span>
             <h2 class="heading-lg" data-i18n="billing_title">Direct Insurance Billing</h2>
-            <p data-i18n="billing_desc">
-              We bill directly to over 20+ major Canadian private insurance providers on the spot for all eligible Registered Massage Therapy (RMT) and Acupuncture sessions.
-            </p>
+            <p data-i18n="billing_desc">We offer direct insurance billing. Please confirm whether your treatment and practitioner are covered by your plan.</p>
             <ul class="insurance-checklist">
               <li><i class="fa-solid fa-check"></i> <span data-i18n="billing_check1"><strong>Zero Paperwork:</strong> Electronic submission at checkout.</span></li>
               <li><i class="fa-solid fa-check"></i> <span data-i18n="billing_check2"><strong>Pay Only The Co-Pay:</strong> Only pay remaining balance if any.</span></li>
@@ -842,9 +601,7 @@
           <div class="about-content">
             <span class="subtitle-badge" data-i18n="about_badge">The Philosophy of 和熙元</span>
             <h2 class="heading-lg" data-i18n="about_title">Ancient Wisdom. Certified Modern Therapy.</h2>
-            <p data-i18n="about_p1">
-              At <strong>HEXY Wellness Clinic 和熙元</strong>, we combine Ontario Registered Massage Therapy and Osteopathy with time-tested Eastern meridian bodywork and Traditional Chinese Medicine. <strong>和 (Harmony)</strong>, <strong>熙 (Radiance)</strong>, and <strong>元 (Vitality)</strong> represent our dedication to restoring your body's natural balance.
-            </p>
+            <p data-i18n="about_p1">At <strong>HEXY Wellness Clinic 和熙元</strong>, we bring together massage therapy, osteopathic treatment, acupuncture and Traditional Chinese Medicine. <strong>和 (Harmony)</strong>, <strong>熙 (Radiance)</strong>, and <strong>元 (Vitality)</strong> represent our dedication to restoring your body's natural balance.</p>
 
             <div class="philosophy-points">
               <div class="philosophy-point">
@@ -877,18 +634,16 @@
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
             <div class="faq-body" data-i18n="faq_a1">
-              Bring your insurance card and government ID. We submit your claim electronically at checkout. If fully covered, you pay $0 out of pocket.
+              Bring your insurance card and government ID. We submit your claim electronically at checkout. Your plan determines the covered amount and any remaining balance.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-header">
-              <span class="faq-question" data-i18n="faq_q2">What is the difference between RMT, Tuina, and Osteopathy?</span>
+              <span class="faq-question" data-i18n="faq_q2">Are massage therapy treatments performed with clothing on?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
-            <div class="faq-body" data-i18n="faq_a2">
-              RMT focuses on muscular trigger points and soft-tissue relief. Tuina uses TCM meridian acupressure to clear energy flow. Osteopathy evaluates the whole body structure, joints, and fascia to restore mobility.
-            </div>
+            <div class="faq-body" data-i18n="faq_a2">Standard, prenatal, moxa stick and energy pack massage therapy are performed with clothing on.</div>
           </div>
 
           <div class="faq-item">
@@ -941,6 +696,8 @@
                   <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
                   <div class="contact-detail-content">
                     <h4 data-i18n="contact_phone_title">Direct Phone</h4>
+                    <p><a href="tel:14372557897">(437) 255-7897</a></p>
+                    <h4 data-i18n="contact_business_phone_title">Business Phone</h4>
                     <p><a href="tel:14168789887">(416) 878-9887</a></p>
                   </div>
                 </div>
@@ -997,18 +754,12 @@
 
               <div class="form-group">
                 <label for="treatment-select" data-i18n="form_service_label">Desired Service</label>
-                <select id="treatment-select" name="treatment" class="form-select">
-                  <option value="Registered Massage Therapy (RMT)">Registered Massage Therapy (RMT)</option>
-                  <option value="RMT Combination Therapy">RMT Combination Therapy</option>
-                  <option value="Energy Heat / Pack Massage">Energy Heat / Energy Pack Massage</option>
-                  <option value="Chinese Herbal Pack Massage">Chinese Herbal Pack Massage</option>
-                  <option value="Traditional / Specialized Acupuncture">Traditional / Specialized Acupuncture</option>
-                  <option value="Moxibustion / Cupping / Gua Sha">Moxibustion / Cupping / Gua Sha</option>
-                  <option value="Osteopathic Manual Therapy">Osteopathic Manual Therapy</option>
-                  <option value="TCM Consultation & Herbal Prescription">TCM Consultation & Herbal Prescription</option>
-                  <option value="Herbal Wellness Products & Teas">Herbal Wellness Products & Teas</option>
-                  <option value="General Question / Other">General Question / Other</option>
-                </select>
+                <select id="treatment-select" name="treatment" class="form-select"><option value="Massage" data-i18n="category_massage">Massage</option>
+<option value="TCM Consultation" data-i18n="category_tcm">TCM Consultation</option>
+<option value="Acupuncture" data-i18n="category_acu">Acupuncture</option>
+<option value="Osteopathic Treatment" data-i18n="category_osteo">Osteopathic Treatment</option>
+<option value="Products & Additional Services" data-i18n="category_products">Products & Additional Services</option>
+<option value="General Question" data-i18n="inquiry_general">General Question</option></select>
               </div>
 
               <div class="form-group">
@@ -1041,9 +792,7 @@
               <span class="site-logo-kanji">和 熙 元</span>
             </div>
           </div>
-          <p data-i18n="footer_desc">
-            Toronto professional clinic combining Registered Massage Therapy (RMT), Acupuncture, Moxibustion, Cupping, Osteopathy, and Traditional Chinese Medicine. Direct billing available.
-          </p>
+          <p data-i18n="footer_desc">Massage Therapy, acupuncture, osteopathic treatment, TCM consultation and herbal wellness products in downtown Toronto.</p>
           <div class="announcement-item" style="color:var(--dark-muted);">
             <i class="fa-solid fa-location-pin" style="color:var(--primary);"></i>
             <span data-i18n="announcement_address">530 Yonge St, Unit 2, Toronto, ON</span>
@@ -1054,14 +803,12 @@
         <div class="footer-col">
           <h4 data-i18n="footer_col_treatments">Services & Menu</h4>
           <ul class="footer-links">
-            <li><a href="#pricing" data-i18n="ptab_1">Registered Massage (RMT)</a></li>
-            <li><a href="#pricing" data-i18n="ptab_2">Acupuncture Therapy</a></li>
-            <li><a href="#pricing" data-i18n="ptab_3">Moxa, Cupping & Gua Sha</a></li>
-            <li><a href="#pricing" data-i18n="ptab_4">Osteopathic Manual</a></li>
-            <li><a href="#pricing" data-i18n="ptab_5">TCM & External Therapies</a></li>
-            <li><a href="#pricing" data-i18n="ptab_6">Herbal Wellness Products</a></li>
-            <li><a href="#pricing" data-i18n="ptab_7">Herbal Teas & Seasonal</a></li>
-          </ul>
+<li><a href="#pricing" data-i18n="category_massage">Massage</a></li>
+<li><a href="#pricing" data-i18n="category_tcm">TCM Consultation</a></li>
+<li><a href="#pricing" data-i18n="category_acu">Acupuncture</a></li>
+<li><a href="#pricing" data-i18n="category_osteo">Osteopathic Treatment</a></li>
+<li><a href="#pricing" data-i18n="category_products">Products & Additional Services</a></li>
+</ul>
         </div>
 
         <!-- Col 3: Quick Links -->
@@ -1069,7 +816,7 @@
           <h4 data-i18n="footer_col_info">Information</h4>
           <ul class="footer-links">
             <li><a href="#direct-billing" data-i18n="nav_billing">Direct Billing</a></li>
-            <li><a href="#pricing" data-i18n="nav_pricing">Services & Rates</a></li>
+            <li><a href="#pricing" data-i18n="nav_pricing">Services</a></li>
             <li><a href="#about" data-i18n="nav_philosophy">Philosophy</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact" data-i18n="nav_contact">Location & Hours</a></li>
@@ -1108,7 +855,7 @@
   <div class="mobile-bottom-bar" aria-label="Mobile Quick Actions">
     <div class="mobile-bottom-inner">
       <a href="tel:14168789887" class="mobile-bottom-btn-call">
-        <i class="fa-solid fa-phone"></i> <span data-i18n="mobile_call">Call Clinic</span>
+        <i class="fa-solid fa-phone"></i> <span data-i18n="mobile_call">Call Business</span>
       </a>
       <button class="mobile-bottom-btn-book js-book-trigger" data-service="Mobile Bottom Bar" data-i18n="btn_book_appointment">
         <i class="fa-solid fa-calendar-check"></i> <span>Book Appointment</span>
@@ -1123,9 +870,9 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/config.js?v=acuity-new-tab-20260922"></script>
-  <script src="js/i18n.js?v=acuity-new-tab-20260922"></script>
-  <script src="js/main.js?v=acuity-new-tab-20260922"></script>
+  <script src="js/config.js?v=phones-20261028"></script>
+  <script src="js/i18n.js?v=phones-20261028"></script>
+  <script src="js/main.js?v=phones-20261028"></script>
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
