@@ -2,7 +2,7 @@
  * HEXY Wellness Clinic 和熙元 - Professional Therapy & Traditional Chinese Medicine
  * Central Configuration
  * 
- * Set booking.url to the clinic’s online booking portal.
+ * Set booking.url to the clinic’s public booking page.
  */
 
 const SITE_CONFIG = {
@@ -25,9 +25,9 @@ const SITE_CONFIG = {
     { days: "Weekends (Sat – Sun)", time: "9:00 AM – 9:00 PM" },
     { days: "Holidays", time: "Open by Appointment" }
   ],
-  // Juvonno patient booking portal
+  // Juvonno public booking page
   booking: {
-    url: "https://hexylife.juvonno.com/"
+    url: "https://hexylife.juvonno.com/portal/publicbook.php"
   },
   social: {
     instagram: "https://instagram.com",

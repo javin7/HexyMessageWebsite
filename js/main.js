@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     businessName: "BEST LIFE 和熙元",
     phone: "437 255 7897",
     booking: {
-      url: "https://hexylife.juvonno.com/"
+      url: "https://hexylife.juvonno.com/portal/publicbook.php"
     }
   };
 
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Open the Juvonno patient portal in a new tab.
+  // 6. Open the Juvonno public booking page in a new tab.
   document.querySelectorAll('.js-book-trigger, a[data-service]').forEach(element => {
     element.href = config.booking.url;
     element.target = '_blank';

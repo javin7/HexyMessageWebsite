@@ -6,10 +6,12 @@ In the repository’s Settings → Pages, use “Deploy from a branch”, with `
 
 The contact form opens a draft in the visitor’s email app using the address in `js/config.js`. Visitors must send the email themselves; the website does not store or deliver submissions. English and Chinese instructions include a direct email fallback.
 
-The `/book/` page redirects to the Juvonno patient portal. The `/services/` and `/pricing/` pages redirect visitors to the services section using static HTML. Custom response headers and cache rules are controlled by GitHub Pages.
+The `/book/` page redirects to the Juvonno public booking page. The `/services/` and `/pricing/` pages redirect visitors to the services section using static HTML. Custom response headers and cache rules are controlled by GitHub Pages.
 
 Preview locally with `python3 -m http.server 8000` and open http://localhost:8000.
 
-The service menu follows the bilingual HEXY Wellness service list. Prices are shown on the Juvonno patient portal; each menu item links to that page.
+The service menu follows the bilingual HEXY Wellness service list. Prices are shown on the Juvonno public booking page; each menu item links to that page.
 
-Set `booking.url` in `js/config.js` to change the booking portal. Booking buttons and service links open the portal in a new tab; the portal may require patients to sign in.
+Set `booking.url` in `js/config.js` to change the booking portal. Booking buttons and service links open the portal in a new tab; customers choose a clinic and appointment before completing the booking. Enable the Patient Portal and set the clinic’s “Book in Portal” option to Yes in Juvonno.
+
+Public booking URL: https://hexylife.juvonno.com/portal/publicbook.php
