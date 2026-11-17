@@ -358,15 +358,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-logo-img {
-  height: 46px;
-  width: 46px;
+  height: 60px;
+  width: 60px;
   object-fit: contain;
   mix-blend-mode: multiply;
 }
 
 .site-logo-wordmark {
   display: block;
-  width: 164px;
+  width: 196px;
   height: auto;
   object-fit: contain;
   mix-blend-mode: multiply;
@@ -391,7 +391,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.82rem;
   letter-spacing: 0.3em;
   color: var(--primary);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* Main Navigation (Centered in the header) */
@@ -1750,7 +1750,8 @@ h1, h2, h3, h4, h5, h6 {
 .footer-brand .site-logo-img {
   filter: brightness(0) invert(1);
   mix-blend-mode: screen;
-  height: 40px;
+  height: 52px;
+  width: 52px;
   margin-bottom: 1.2rem;
 }
 
@@ -2132,12 +2133,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .site-logo-img {
-    height: 36px;
-    width: 36px;
+    height: 44px;
+    width: 44px;
   }
 
   .site-logo-wordmark {
-    width: 124px;
+    width: 140px;
   }
 
   .site-logo-title {
@@ -2514,3 +2515,16 @@ h1, h2, h3, h4, h5, h6 {
 /* Direct appointment links. */
 .rate-pill-booking { cursor: pointer; font: inherit; text-decoration: none; color: inherit; }
 .rate-pill-booking:hover, .rate-pill-booking:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* Give the Chinese translation stronger, more readable strokes. */
+html:lang(zh) body {
+  font-weight: 500;
+}
+
+html:lang(zh) :is(h1, h2, h3, h4, h5, h6, .hero-title em, .stat-number, .pricing-item-title) {
+  font-weight: 600;
+}
+
+.js-lang-toggle .lang-label {
+  font-weight: 600;
+}

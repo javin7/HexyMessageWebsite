@@ -17,7 +17,7 @@ const SITE_CONFIG = {
     street: "530 Yonge St, Unit 2",
     city: "Toronto",
     province: "ON",
-    postalCode: "M4Y 1X9",
+    postalCode: "M4Y 1Y8",
     landmark: "Downtown Toronto (Yonge & Wellesley)"
   },
   hours: [
