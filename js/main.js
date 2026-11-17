@@ -118,15 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Open the Juvonno patient portal in a new tab.
   document.querySelectorAll('.js-book-trigger, a[data-service]').forEach(element => {
-    const link = document.createElement('a');
-    for (const attribute of element.attributes) {
-      if (attribute.name !== 'type') link.setAttribute(attribute.name, attribute.value);
-    }
-    link.innerHTML = element.innerHTML;
-    link.href = config.booking.url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    element.replaceWith(link);
+    element.href = config.booking.url;
+    element.target = '_blank';
+    element.rel = 'noopener noreferrer';
   });
 
   // 7. Toast Notification Utility
