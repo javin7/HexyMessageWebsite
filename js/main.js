@@ -1,6 +1,6 @@
 /**
  * BEST LIFE 和熙元 - Main Application Script
- * Acuity Scheduling Integration, Interactive Service Filters & UI Logic
+ * Juvonno Booking Integration, Interactive Service Filters & UI Logic
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const config = typeof SITE_CONFIG !== 'undefined' ? SITE_CONFIG : {
     businessName: "BEST LIFE 和熙元",
     phone: "437 255 7897",
-    acuity: {
-      schedulingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853",
-      directBookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853"
+    booking: {
+      url: "https://hexylife.juvonno.com/"
     }
   };
 
@@ -117,50 +116,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Open Acuity booking links in a new tab.
-  const bookingUrl = (appointmentType) => {
-    const url = new URL(config.acuity.directBookingUrl);
-    if (appointmentType) url.searchParams.set('appointmentType', appointmentType);
-    return url.href;
-  };
-
-  const makeBookingLink = (element, appointmentType) => {
+  // 6. Open the Juvonno patient portal in a new tab.
+  document.querySelectorAll('.js-book-trigger, a[data-service]').forEach(element => {
     const link = document.createElement('a');
     for (const attribute of element.attributes) {
       if (attribute.name !== 'type') link.setAttribute(attribute.name, attribute.value);
     }
     link.innerHTML = element.innerHTML;
-    link.href = bookingUrl(appointmentType);
+    link.href = config.booking.url;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     element.replaceWith(link);
-    return link;
-  };
-
-  // Each configured price opens its exact appointment and duration.
-  document.querySelectorAll('.pricing-item-card').forEach(card => {
-    const service = card.querySelector('.js-book-trigger')?.getAttribute('data-service');
-    const appointments = config.acuity.appointmentTypes?.[service] || [];
-    card.querySelectorAll('.rate-pill').forEach(pill => {
-      const duration = parseInt(pill.querySelector('.rate-pill-dur')?.textContent, 10);
-      const appointment = appointments.find(item => item.duration === duration);
-      if (!appointment) return;
-      const link = makeBookingLink(pill, appointment.id);
-      link.classList.add('rate-pill-booking');
-      link.setAttribute('aria-label', `${service} — ${duration} min`);
-    });
-  });
-
-  document.querySelectorAll('.js-book-trigger').forEach(button => {
-    const name = button.getAttribute('data-service') || '';
-    const service = config.acuity.serviceAliases?.[name] || name;
-    const appointments = config.acuity.appointmentTypes?.[service] || [];
-    // Let clients choose the duration in Acuity when a service has several options.
-    const category = config.acuity.categories?.[service]
-      || (appointments.length > 1
-        ? config.acuity.categories?.[service === 'Traditional Acupuncture' ? 'Acupuncture' : 'Massage Therapy']
-        : undefined);
-    makeBookingLink(button, appointments.length === 1 ? appointments[0].id : category);
   });
 
   // 7. Toast Notification Utility

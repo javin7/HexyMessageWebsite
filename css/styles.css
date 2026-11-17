@@ -1788,20 +1788,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary-light);
 }
 
-.footer-acuity-box {
+.footer-booking-box {
   background: var(--dark-surface);
   border: 1px solid var(--dark-border);
   padding: 1.5rem;
 }
 
-.footer-acuity-box h5 {
+.footer-booking-box h5 {
   color: #ffffff;
   font-size: 0.88rem;
   font-family: var(--font-display);
   margin-bottom: 0.4rem;
 }
 
-.footer-acuity-box p {
+.footer-booking-box p {
   font-size: 0.78rem;
   color: var(--dark-muted);
   margin-bottom: 1rem;

@@ -2,9 +2,7 @@
  * HEXY Wellness Clinic 和熙元 - Professional Therapy & Traditional Chinese Medicine
  * Central Configuration
  * 
- * To connect your live Acuity Scheduling account:
- * Set acuity.schedulingUrl and acuity.directBookingUrl to your full scheduling URL.
- * Example: 'https://bestlifemassage.as.me/' or 'https://app.acuityscheduling.com/schedule.php?owner=40451853'
+ * Set booking.url to the clinic’s online booking portal.
  */
 
 const SITE_CONFIG = {
@@ -27,16 +25,9 @@ const SITE_CONFIG = {
     { days: "Weekends (Sat – Sun)", time: "9:00 AM – 9:00 PM" },
     { days: "Holidays", time: "Open by Appointment" }
   ],
-  // Acuity Scheduling URLs
-  acuity: {
-    schedulingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853",
-    directBookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40451853",
-    embeddedType: "iframe",
-    // The current menu uses the main booking page for prices and availability.
-    // Old appointment IDs are intentionally removed: they refer to the previous menu.
-    categories: {},
-    serviceAliases: {},
-    appointmentTypes: {}
+  // Juvonno patient booking portal
+  booking: {
+    url: "https://hexylife.juvonno.com/"
   },
   social: {
     instagram: "https://instagram.com",
