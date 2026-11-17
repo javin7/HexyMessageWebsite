@@ -359,7 +359,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-logo-img {
   height: 46px;
-  width: auto;
+  width: 46px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.site-logo-wordmark {
+  display: block;
+  width: 164px;
+  height: auto;
   object-fit: contain;
   mix-blend-mode: multiply;
 }
@@ -2125,6 +2133,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .site-logo-img {
     height: 36px;
+    width: 36px;
+  }
+
+  .site-logo-wordmark {
+    width: 124px;
   }
 
   .site-logo-title {

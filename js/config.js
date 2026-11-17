@@ -10,9 +10,9 @@
 const SITE_CONFIG = {
   businessName: "HEXY Wellness Clinic 和熙元",
   tagline: "Professional Therapy & Traditional Chinese Medicine",
-  phone: "(416) 878-9887",
-  phoneRaw: "14168789887",
-  directPhone: "(437) 255-7897",
+  phone: "437 255 7897",
+  phoneRaw: "14372557897",
+  directPhone: "437 255 7897",
   directPhoneRaw: "14372557897",
   email: "lifegotbetter@evergreenheath.com",
   address: {
