@@ -116,9 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Open the Juvonno public booking page in a new tab.
+  // 6. Preserve service-specific links; use the configured portal for general booking.
   document.querySelectorAll('.js-book-trigger, a[data-service]').forEach(element => {
-    element.href = config.booking.url;
+    if (element.classList.contains('js-book-trigger')) {
+      element.href = config.booking.url;
+    }
     element.target = '_blank';
     element.rel = 'noopener noreferrer';
   });
