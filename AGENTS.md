@@ -52,8 +52,8 @@ The seven clinic-supplied profiles are:
 
 | Card ID | Display name | Source DOCX filename |
 | --- | --- | --- |
-| `practitioner-carol` | XianTao (Carol) Luo | `HEXY_Carol_Luo_Bilingual_Bio.docx` |
-| `practitioner-joe` | Joe Wu | `HEXY_Joe_Wu_Bilingual_Bio.docx` |
+| `practitioner-carol` | Xiantao (Carol) Luo | `HEXY_Carol_Luo_Bilingual_Bio.docx` |
+| `practitioner-joe` | Zhusong（Joe）Wu | `HEXY_Joe_Wu_Bilingual_Bio.docx` |
 | `practitioner-lily` | Liping (Lily) Zhai | `HEXY_Liping_Lily_Zhai_Bilingual_Bio_Final.docx` |
 | `practitioner-morris` | Yuan Ming (Morris) Zhang | `HEXY_Morris_Zhang_Bilingual_Bio.docx` |
 | `practitioner-susan` | Shufeng (Susan) Peng | `HEXY_Shufeng_Susan_Peng_Bilingual_Bio.docx` |
@@ -72,7 +72,7 @@ User requirements:
 - Current grid: three columns, two at widths up to 1080px, one up to 640px. The header switches to drawer navigation up to 1200px to accommodate the extra menu item.
 - To add a portrait, replace only that person's `.practitioner-photo-placeholder` div with an image using `.practitioner-photo`, descriptive `alt`, and `loading="lazy"`. Keep the card and heading IDs and consistent crop dimensions.
 
-Credentials come from the supplied bios. In particular, Thomas's supplied role is Massage Therapy; do not silently upgrade it to RMT. Public profile presence does not prove that person has a matching Juvonno booking account.
+Credentials come from the supplied bios and explicit user corrections. The user subsequently specified Thomas's role as Registered Massage Therapist (RMT), overriding the original bio's Massage Therapy label. The latest user correction restores the full display names listed above, with Xiantao spelled exactly this way and Joe displayed as Zhusong（Joe）Wu. Use these full names in headings, photo alt text and popup titles, but use only Carol, Joe, Lily, Morris, Susan, Thomas or Jolyn within biography prose in both languages. This supersedes the earlier request for shortened display names. Public profile presence does not prove that person has a matching Juvonno booking account.
 
 ## Booking integration — preserve direct links
 
