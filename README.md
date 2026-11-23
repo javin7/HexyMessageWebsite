@@ -15,3 +15,7 @@ The service menu follows the bilingual HEXY Wellness service list. Prices are sh
 Set `booking.url` in `js/config.js` to change the booking portal. General booking buttons use this setting. Service links retain their own URLs in `index.html` and open in a new tab. Juvonno uses `branch_id=1` for HEXY LIFE, `category` for service categories, and `product_id` for individual appointments. Verify IDs against the public portal when changing links. Enable the Patient Portal and set the clinic’s “Book in Portal” option to Yes in Juvonno.
 
 Public booking URL: https://hexylife.juvonno.com/portal/publicbook.php
+
+The practitioners section contains seven clinic-supplied biographies. English and Chinese copy lives in `js/i18n.js`; each card has an introduction and an expandable full biography. Practitioner links appear in the desktop navigation, mobile menu, and footer.
+
+To add a portrait, replace that practitioner's `.practitioner-photo-placeholder` div in `index.html` with an `<img class="practitioner-photo" src="assets/images/your-photo.jpg" alt="Practitioner name" loading="lazy">`. Keep the surrounding article and its ID. The existing photo styles crop portraits consistently across desktop and mobile layouts.
