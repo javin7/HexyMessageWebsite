@@ -16,6 +16,6 @@ Set `booking.url` in `js/config.js` to change the booking portal. General bookin
 
 Public booking URL: https://hexylife.juvonno.com/portal/publicbook.php
 
-The practitioners section contains seven clinic-supplied biographies. English and Chinese copy lives in `js/i18n.js`; each card has an introduction and an expandable full biography. Practitioner links appear in the desktop navigation, mobile menu, and footer.
+The practitioners section contains seven clinic-supplied biographies. English and Chinese copy lives in `js/i18n.js`; each card has an introduction and a full biography shown in an animated popup. Cards have equal heights within each grid row. Practitioner links appear in the desktop navigation, mobile menu, and footer.
 
 To add a portrait, replace that practitioner's `.practitioner-photo-placeholder` div in `index.html` with an `<img class="practitioner-photo" src="assets/images/your-photo.jpg" alt="Practitioner name" loading="lazy">`. Keep the surrounding article and its ID. The existing photo styles crop portraits consistently across desktop and mobile layouts.

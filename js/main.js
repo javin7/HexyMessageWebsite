@@ -161,7 +161,73 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 9. Scroll-Triggered Fade-In Observer
+  // 9. Practitioner biographies: native dialog provides focus trapping and modal semantics.
+  const biographyDialog = document.getElementById('practitionerBiography');
+  if (biographyDialog) {
+    let biographyTrigger = null;
+    let previousOverflow = '';
+    let closeTimer;
+
+    const finishBiographyClose = () => {
+      clearTimeout(closeTimer);
+      biographyDialog.close();
+    };
+
+    const closeBiography = () => {
+      if (!biographyDialog.open || biographyDialog.classList.contains('is-closing')) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        finishBiographyClose();
+        return;
+      }
+      biographyDialog.classList.add('is-closing');
+      closeTimer = setTimeout(finishBiographyClose, 220);
+    };
+
+    document.querySelectorAll('.practitioner-biography-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        if (biographyDialog.open) return;
+        const card = trigger.closest('.practitioner-card');
+        biographyDialog.querySelector('#practitionerBiographyName').textContent = card.querySelector('h3').textContent;
+        biographyDialog.querySelector('#practitionerBiographyRole').textContent = card.querySelector('.practitioner-role').textContent;
+        const introduction = card.querySelector('.practitioner-intro').cloneNode(true);
+        introduction.classList.remove('practitioner-intro');
+        biographyDialog.querySelector('.practitioner-modal-body').replaceChildren(
+          introduction,
+          ...Array.from(card.querySelector('.practitioner-bio-text').childNodes, node => node.cloneNode(true))
+        );
+        biographyTrigger = trigger;
+        previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        biographyDialog.classList.remove('is-closing');
+        biographyDialog.showModal();
+        biographyDialog.scrollTop = 0;
+      });
+    });
+
+    biographyDialog.querySelector('.practitioner-modal-close').addEventListener('click', closeBiography);
+    biographyDialog.addEventListener('cancel', event => {
+      event.preventDefault();
+      closeBiography();
+    });
+    biographyDialog.addEventListener('click', event => {
+      const bounds = biographyDialog.getBoundingClientRect();
+      if (event.target === biographyDialog && (
+        event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom
+      )) closeBiography();
+    });
+    biographyDialog.addEventListener('animationend', event => {
+      if (event.target === biographyDialog && event.animationName === 'biography-close') finishBiographyClose();
+    });
+    biographyDialog.addEventListener('close', () => {
+      clearTimeout(closeTimer);
+      biographyDialog.classList.remove('is-closing');
+      document.body.style.overflow = previousOverflow;
+      biographyTrigger?.focus({ preventScroll: true });
+    });
+  }
+
+  // 10. Scroll-Triggered Fade-In Observer
   const fadeElements = document.querySelectorAll('.fade-in-section, .fade-in-stagger');
   
   if ('IntersectionObserver' in window) {
